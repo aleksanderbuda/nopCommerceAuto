@@ -4,17 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="" />
+    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/PropertiesReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -23,7 +42,9 @@
   "associatedIndex": 5
 }]]></component>
   <component name="ProjectId" id="2sIgGQYcXEp4mat3ErguixW1Hpj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,9 +55,24 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto\src\main\resources" />
+      <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto\src\test" />
+      <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto\src\test\java" />
+      <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto\src\main\java" />
+      <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,6 +82,27 @@
       <option name="presentableId" value="Default" />
       <updated>1738148406993</updated>
     </task>
+    <task id="LOCAL-00001" summary="project">
+      <option name="closed" value="true" />
+      <created>1738148470695</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738148470695</updated>
+    </task>
+    <task id="LOCAL-00002" summary="project">
+      <option name="closed" value="true" />
+      <created>1738148737165</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738148737165</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project" />
+    <option name="LAST_COMMIT_MESSAGE" value="project" />
   </component>
 </project>
