@@ -1,8 +1,13 @@
 package nopCommerceAuto.utils;
+
+import lombok.extern.java.Log;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.logging.Level;
 
+@Log
 public class PropertiesReader {
     private static Properties properties;
 
@@ -13,7 +18,7 @@ public class PropertiesReader {
             properties.load(input);
             input.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.log(Level.WARNING, e.getMessage(), e);
         }
     }
 
