@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="drivers set up">
-      <change afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/BasePageTest.java" afterDir="false" />
+    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="project set up">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/PropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/BasePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/BasePageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/HomePageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,12 +132,21 @@
       <option name="project" value="LOCAL" />
       <updated>1738155067328</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="project set up">
+      <option name="closed" value="true" />
+      <created>1738157502492</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738157502492</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project" />
     <MESSAGE value="drivers set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="drivers set up" />
+    <MESSAGE value="project set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="project set up" />
   </component>
 </project>
