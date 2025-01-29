@@ -16,6 +16,8 @@ public interface Constants {
 
     interface PageTitles {
 
+        String HOME_PAGE_TITLE = "";
+
 
     }
 }

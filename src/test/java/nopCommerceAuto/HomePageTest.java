@@ -1,13 +1,16 @@
 package nopCommerceAuto;
 
+import nopCommerceAuto.pages.HomePage;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class HomePageTest extends BasePageTest {
 
     @Test
     public void testExample() {
-        driver.get("https://demo.nopcommerce.com/");
-        System.out.println(driver.getTitle());
-        System.out.println(driver.getCurrentUrl());
+        SoftAssert softAssert = new SoftAssert();
+        HomePage homePage = new HomePage(getDriver());
+
+        homePage.open();
     }
 }

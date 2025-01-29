@@ -14,6 +14,10 @@ public class BasePageTest {
         driver = DriverFactory.createDriver();
     }
 
+    protected WebDriver getDriver() {
+        return DriverFactory.getDriver();
+    }
+
     @AfterMethod
     public void tearDown() {
         DriverFactory.quitDriver();
