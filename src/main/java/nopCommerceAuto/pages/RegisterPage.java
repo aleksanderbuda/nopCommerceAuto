@@ -7,13 +7,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 @Getter
-public class HomePage extends AbstractPage {
+public class RegisterPage extends AbstractPage {
 
     private final WebDriverWait wait;
 
-    public HomePage(WebDriver driver) {
-        super(driver, PageTitles.HOME_PAGE_TITLE, Urls.HOME_PAGE_URL);
+    public RegisterPage(WebDriver driver) {
+        super(driver, PageTitles.REGISTER_PAGE_TITLE, Urls.REGISTER_PAGE_URL);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
+
+
 
 }
