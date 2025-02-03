@@ -15,6 +15,11 @@ public interface Constants {
         String REGISTER_PAGE_URL = URL + "/register?returnUrl=%2F";
 
 
+
+        String SLIDER_GALAXY_URL= "https://demo.nopcommerce.com/images/thumbs/0000093_Slider Galaxy.png";
+
+        String SLIDER_IPHONE_URL = "https://demo.nopcommerce.com/images/thumbs/0000094_Slider iphone.png";
+
     }
 
     interface PageTitles {
