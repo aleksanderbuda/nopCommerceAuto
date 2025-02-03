@@ -1,5 +1,5 @@
 package nopCommerceAuto;
 
-public class AbstractPageTest {
+public abstract class AbstractPageTest {
 
 }

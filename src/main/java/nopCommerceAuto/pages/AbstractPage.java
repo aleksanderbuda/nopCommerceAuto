@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AbstractPage implements Constants {
+public abstract class AbstractPage implements Constants {
 
     @FindBy(xpath = "//title")
     private WebElement title;
