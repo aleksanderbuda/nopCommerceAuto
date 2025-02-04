@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public abstract class AbstractPage implements Constants {
 
-    @FindBy(xpath = "//title")
+    @FindBy(xpath = "(//h1) | (//title)")
     private WebElement title;
 
     protected final Logger LOGGER = LogManager.getLogger(this.getClass());
