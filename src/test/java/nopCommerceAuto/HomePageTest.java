@@ -10,7 +10,7 @@ import org.testng.asserts.SoftAssert;
 public class HomePageTest extends BasePageTest {
 
     @Test
-    public void checkIfSliderBannerChangesPictures() {
+    public void checkIfCarouselChangesPictures() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = getDriver();
 
@@ -18,11 +18,23 @@ public class HomePageTest extends BasePageTest {
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home Page is not opened");
 
-        boolean galaxyImageChanged = homePage.waitForSliderImage(Constants.Urls.SLIDER_GALAXY_URL);
+        homePage.waitForCarouselInitialization();
+
+        boolean galaxyImageChanged = homePage.waitForCarouselImage(Constants.Urls.SLIDER_GALAXY_URL);
         softAssert.assertTrue(galaxyImageChanged, "Galaxy slider image did not change as expected");
 
-        boolean iphoneImageChanged = homePage.waitForSliderImage(Constants.Urls.SLIDER_IPHONE_URL);
+        boolean iphoneImageChanged = homePage.waitForCarouselImage(Constants.Urls.SLIDER_IPHONE_URL);
         softAssert.assertTrue(iphoneImageChanged, "iPhone slider image did not change as expected");
+
+        homePage.switchToNextImage();
+        boolean galaxyImageChangedManually = homePage.waitForCarouselImage(Constants.Urls.SLIDER_GALAXY_URL);
+        softAssert.assertTrue(galaxyImageChangedManually,
+                "Galaxy slider image did not change as expected after manually clicking the navigation button");
+
+        homePage.switchToNextImage();
+        boolean iphoneImageChangedManually = homePage.waitForCarouselImage(Constants.Urls.SLIDER_IPHONE_URL);
+        softAssert.assertTrue(iphoneImageChangedManually,
+                "iPhone slider image did not change as expected after manually clicking the navigation button");
 
         softAssert.assertAll();
     }

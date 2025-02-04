@@ -32,6 +32,9 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//a[contains(@class, 'nivo-imageLink')]")
     private List<WebElement> sliderImageLinks;
 
+    @FindBy(xpath = "//div[@id=\"nivo-slider\"]")
+    private WebElement carousel;
+
     private final WebDriverWait wait;
     private final Wait<WebDriver> fluentwait;
 
@@ -41,57 +44,57 @@ public class HomePage extends AbstractPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         this.fluentwait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(500))
+                .pollingEvery(Duration.ofMillis(1000))
                 .ignoring(NoSuchElementException.class)
                 .ignoring(StaleElementReferenceException.class);
     }
 
+    public void waitForCarouselInitialization() {
+        fluentwait.until(driver -> !sliderImageLinks.isEmpty() &&
+                sliderImageLinks.stream()
+                        .anyMatch(link -> "block".equals(link.getCssValue("display"))));
+    }
+
     public String getActiveImageUrl() {
         try {
-            WebElement activeSliderLink = fluentwait.until(driver -> {
-                for (WebElement link : sliderImageLinks) {
-                    String display = link.getCssValue("display");
-                    if (display.equals("block")) {
-                        return link;
-                    }}
-                return null;
-            });
-            if (activeSliderLink != null) {
-                WebElement img = activeSliderLink.findElement(By.tagName("img"));
-                String src = img.getAttribute("src");
-                LOGGER.info("Active slider image src detected: " + src);
-                return src;
-            }
-            throw new RuntimeException("No active slider link found");
+            WebElement activeSliderLink = fluentwait.until(driver ->
+                    sliderImageLinks.stream()
+                            .filter(link -> "block".equals(link.getCssValue("display")))
+                            .findFirst()
+                            .orElseThrow(() -> new RuntimeException("No active slider link found"))
+            );
+            WebElement img = activeSliderLink.findElement(By.tagName("img"));
+            String src = img.getAttribute("src");
+            LOGGER.info("Active slider image src detected: {}", src);
+            return URLDecoder.decode(src, StandardCharsets.UTF_8);
         } catch (Exception e) {
-            LOGGER.error("Error finding active slider image: " + e.getMessage());
+            LOGGER.error("Error finding active slider image: {}", e.getMessage());
             throw new RuntimeException("Unable to find active slider image", e);
         }
     }
 
-    public boolean waitForSliderImage(String expectedImageUrl) {
+    public boolean waitForCarouselImage(String expectedImageUrl) {
         try {
             return fluentwait.until(driver -> {
                 String currentSrc = getActiveImageUrl();
-                String decodedCurrentSrc = URLDecoder.decode(currentSrc, StandardCharsets.UTF_8);
-                LOGGER.info("Waiting for slider image to change. Expected: " + expectedImageUrl +
-                        ", Current: " + decodedCurrentSrc);
-                return decodedCurrentSrc.equals(expectedImageUrl);
+                LOGGER.info("Waiting for slider image to change. Expected: {}, Current {}",
+                        expectedImageUrl, currentSrc);
+                return currentSrc.trim().equalsIgnoreCase(expectedImageUrl.trim());
             });
         } catch (TimeoutException e) {
-            String currentImage = getActiveImageUrl();
-            String decodedCurrentImage = URLDecoder.decode(currentImage, StandardCharsets.UTF_8);
-            LOGGER.error("Timeout waiting for image to change. Expected: " + expectedImageUrl +
-                    ", Current: " + decodedCurrentImage);
+            String currentImage = URLDecoder.decode(getActiveImageUrl(), StandardCharsets.UTF_8);
+            LOGGER.error("Timeout waiting for image to change. Expected: {}, Current {}",
+                    expectedImageUrl, currentImage);
             return false;
         } catch (Exception e) {
-            LOGGER.error("Error waiting for slider image: " + e.getMessage());
+            LOGGER.error("Error waiting for slider image: {}",  e.getMessage());
             return false;
         }
     }
 
     public void switchToNextImage() {
         LOGGER.info("Switching to the next slider image");
+        new WebDriverWait(driver, Duration.ofMillis(1500));
         wait.until(ExpectedConditions.elementToBeClickable(inactiveSliderButton)).click();
     }
 }
