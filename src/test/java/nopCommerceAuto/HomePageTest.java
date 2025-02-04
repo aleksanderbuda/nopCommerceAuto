@@ -20,19 +20,19 @@ public class HomePageTest extends BasePageTest {
 
         homePage.waitForCarouselInitialization();
 
-        boolean galaxyImageChanged = homePage.waitForCarouselImage(Constants.Urls.SLIDER_GALAXY_URL);
+        boolean galaxyImageChanged = homePage.waitForCarouselImage(Constants.Urls.CAROUSEL_GALAXY_IMAGE_URL);
         softAssert.assertTrue(galaxyImageChanged, "Galaxy slider image did not change as expected");
 
-        boolean iphoneImageChanged = homePage.waitForCarouselImage(Constants.Urls.SLIDER_IPHONE_URL);
+        boolean iphoneImageChanged = homePage.waitForCarouselImage(Constants.Urls.CAROUSEL_IPHONE_IMAGE_URL);
         softAssert.assertTrue(iphoneImageChanged, "iPhone slider image did not change as expected");
 
         homePage.switchToNextImage();
-        boolean galaxyImageChangedManually = homePage.waitForCarouselImage(Constants.Urls.SLIDER_GALAXY_URL);
+        boolean galaxyImageChangedManually = homePage.waitForCarouselImage(Constants.Urls.CAROUSEL_GALAXY_IMAGE_URL);
         softAssert.assertTrue(galaxyImageChangedManually,
                 "Galaxy slider image did not change as expected after manually clicking the navigation button");
 
         homePage.switchToNextImage();
-        boolean iphoneImageChangedManually = homePage.waitForCarouselImage(Constants.Urls.SLIDER_IPHONE_URL);
+        boolean iphoneImageChangedManually = homePage.waitForCarouselImage(Constants.Urls.CAROUSEL_IPHONE_IMAGE_URL);
         softAssert.assertTrue(iphoneImageChangedManually,
                 "iPhone slider image did not change as expected after manually clicking the navigation button");
 
