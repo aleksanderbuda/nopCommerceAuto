@@ -35,7 +35,6 @@ public class CompareProductsPage extends AbstractPage {
     @FindBy(xpath = "//button[@class='button-2 remove-button']")
     private WebElement singleRemoveButton;
 
-
     private final WebDriverWait wait;
     private final Wait<WebDriver> fluentwait;
 
@@ -49,6 +48,8 @@ public class CompareProductsPage extends AbstractPage {
                 .ignoring(NoSuchElementException.class)
                 .ignoring(StaleElementReferenceException.class);
     }
+
+
 
 
 

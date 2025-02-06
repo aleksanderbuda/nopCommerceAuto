@@ -1,7 +1,9 @@
 package nopCommerceAuto.pages;
 
 import lombok.Getter;
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -35,13 +37,21 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//div[@id=\"nivo-slider\"]")
     private WebElement carousel;
 
+    @FindBy(xpath = "(//ul[@class='sublist first-level']//a)[2]")
+    private WebElement notebooksLink;
+
+    @FindBy(xpath = "//a[@href='/computers']")
+    private WebElement computersNavBar;
+
     private final WebDriverWait wait;
     private final Wait<WebDriver> fluentwait;
+    private final Actions actions;
 
     public HomePage(WebDriver driver) {
         super(driver, PageTitles.HOME_PAGE_TITLE, Urls.HOME_PAGE_URL);
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        this.actions = new Actions(driver, Duration.ofSeconds(5));
         this.fluentwait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(1000))
@@ -96,5 +106,13 @@ public class HomePage extends AbstractPage {
         LOGGER.info("Switching to the next slider image");
         new WebDriverWait(driver, Duration.ofMillis(1500));
         wait.until(ExpectedConditions.elementToBeClickable(inactiveSliderButton)).click();
+    }
+
+    public NotebooksPage openNotebooksPage() {
+        actions.moveToElement(computersNavBar).perform();
+        notebooksLink.click();
+        NotebooksPage notebooksPage = new NotebooksPage(driver);
+        notebooksPage.isPageOpened();
+        return notebooksPage;
     }
 }
