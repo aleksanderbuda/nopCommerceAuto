@@ -8,9 +8,11 @@ public interface Constants {
 
         String URL = PropertiesReader.getProperty("url");
 
-        String BASE_URL = "https://demo.nopcommerce.com";
+        String BASE_URL = "http://127.0.0.1:5000";
 
         String HOME_PAGE_URL = URL;
+
+        String NOTEBOOKS_PAGE_URL = URL + "/nootebooks";
 
         String REGISTER_PAGE_URL = URL + "/register?returnUrl=%2F";
 
@@ -28,9 +30,11 @@ public interface Constants {
 
     interface PageTitles {
 
-        String HOME_PAGE_TITLE = "nopCommerce demo store";
+        String HOME_PAGE_TITLE = "Your store. Home page title";
 
         String REGISTER_PAGE_TITLE = "";
+
+        String NOTEBOOKS_PAGE_TITLE = "Your store. Notebooks";
 
         String COMPARE_PRODUCTS_PAGE_TITLE = "Compare products";
 
