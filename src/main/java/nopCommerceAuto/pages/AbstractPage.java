@@ -41,6 +41,6 @@ public abstract class AbstractPage implements Constants {
 //        LOGGER.info("Expected title: '{}', Actual title: '{}'", titleText, getTitleText());
 //        LOGGER.info("Expected URL: '{}', Actual URL: '{}'", pageUrl, getCurrentUrl());
         return getTitleText().equals(titleText) && getCurrentUrl().contains(pageUrl);
-    }
 
+    }
 }

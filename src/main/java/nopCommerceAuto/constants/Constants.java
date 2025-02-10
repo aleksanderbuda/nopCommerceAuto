@@ -12,13 +12,15 @@ public interface Constants {
 
         String HOME_PAGE_URL = URL;
 
-        String NOTEBOOKS_PAGE_URL = URL + "/nootebooks";
+        String NOTEBOOKS_PAGE_URL = URL + "/notebooks";
 
         String REGISTER_PAGE_URL = URL + "/register?returnUrl=%2F";
 
         String COMPARE_PRODUCT_PAGE_URL = URL + "/compareproducts";
 
         String PRODUCT_PAGE_URL = URL + "example";
+
+        String NOTEBOOKS_8GB_URL = URL + "/notebooks?viewmode=grid&orderby=0&pagesize=6&specs=9";
 
 
 
@@ -36,7 +38,7 @@ public interface Constants {
 
         String NOTEBOOKS_PAGE_TITLE = "Your store. Notebooks";
 
-        String COMPARE_PRODUCTS_PAGE_TITLE = "Compare products";
+        String COMPARE_PRODUCTS_PAGE_TITLE = "Your store. Compare Products";
 
         String PRODUCT_PAGE_TITLE = "";
 
