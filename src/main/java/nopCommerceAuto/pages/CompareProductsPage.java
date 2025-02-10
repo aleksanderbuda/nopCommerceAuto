@@ -39,7 +39,7 @@ public class CompareProductsPage extends AbstractPage {
     private final Wait<WebDriver> fluentwait;
 
     public CompareProductsPage(WebDriver driver) {
-        super(driver, Urls.COMPARE_PRODUCT_PAGE_URL, PageTitles.COMPARE_PRODUCTS_PAGE_TITLE);
+        super(driver, PageTitles.COMPARE_PRODUCTS_PAGE_TITLE, Urls.COMPARE_PRODUCT_PAGE_URL);
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         this.fluentwait = new FluentWait<>(driver)
