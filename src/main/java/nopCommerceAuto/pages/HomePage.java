@@ -109,10 +109,9 @@ public class HomePage extends AbstractPage {
     }
 
     public NotebooksPage openNotebooksPage() {
+        LOGGER.info("Opening the Notebooks Page...");
         actions.moveToElement(computersNavBar).perform();
         notebooksLink.click();
-        NotebooksPage notebooksPage = new NotebooksPage(driver);
-        notebooksPage.isPageOpened();
-        return notebooksPage;
+        return new NotebooksPage(driver);
     }
 }

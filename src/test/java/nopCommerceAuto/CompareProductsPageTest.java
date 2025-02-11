@@ -22,6 +22,7 @@ public class CompareProductsPageTest extends BasePageTest {
             homePage.open();
             Assert.assertTrue(homePage.isPageOpened(), "Home Page is not opened");
 
+            pause(1);
             NotebooksPage notebooksPage = homePage.openNotebooksPage();
             Assert.assertTrue(notebooksPage.isPageOpened(), "Notebooks page is not opened");
 
@@ -30,25 +31,27 @@ public class CompareProductsPageTest extends BasePageTest {
                     "The URL did not change after checking the 8GB memory box");
 
             pause(1);
-            List<ProductInfo> products = notebooksPage.getProductInfo();
-            ProductInfo firstProduct = products.get(0);
-            ProductInfo secondProduct = products.get(1);
-//            System.out.println(firstProduct);
-//            System.out.println(secondProduct);
+            List<ProductInfo> notebooksPageProducts = notebooksPage.getProducts();
+            ProductInfo notebooksPageFirstProduct = notebooksPageProducts.get(0);
+            ProductInfo notebooksPageSecondProduct = notebooksPageProducts.get(1);
 
-            notebooksPage.clickCompareButtonForProducts(2);
+            notebooksPage.clickCompareButton(2);
 
-            CompareProductsPage compareProductsPage = notebooksPage.openCompareProductPage();
+            CompareProductsPage compareProductsPage = notebooksPage.openComparePage();
             Assert.assertTrue(compareProductsPage.isPageOpened(),
                     "Compare Product Page is not opened");
 
+            pause(1);
+            List<ProductInfo> comparePageProducts = compareProductsPage.getProductInfoFromTable();
+            ProductInfo comparePageFirstProduct = comparePageProducts.get(0);
+            ProductInfo comparePageSecondProduct = comparePageProducts.get(1);
+
+            Assert.assertEquals(notebooksPageFirstProduct.toString(), comparePageSecondProduct.toString(),
+                    "First product on Compare Page is not the same as selected on Notebooks page");
+            Assert.assertEquals(notebooksPageSecondProduct.toString(), comparePageFirstProduct.toString(),
+                    "Second product on Compare Page is not the same as selected on Notebooks page");
 
             softAssert.assertAll();
-
         }
-        //dodać jeden produkt do compare page zgarnąć jego cene, nazwe i img src z product page
-        //dodać drugi produkt do compare page zgarnąć jego cene, nazwe i img src z product page
-        // na compare page assert price, name, img src z obrazka
-    //dodać, log, że stronka się otworzyła
     }
 
