@@ -42,4 +42,6 @@ public class BasePageTest {
         LOGGER.debug("Pause is over. Keep going..");
     }
 
+
+
 }

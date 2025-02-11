@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="changed to localhost, added test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/model/ProductInfo.java" afterDir="false" />
+    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="pause, fetch methods, refactoring code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CompareProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CompareProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/BasePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/BasePageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CompareProductsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CompareProductsPageTest.java" afterDir="false" />
@@ -52,23 +51,23 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor": "Run",
-    "TestNG.HomePageTest.bb.executor": "Debug",
-    "TestNG.HomePageTest.checkIfCarouselChangesPictures.executor": "Run",
-    "TestNG.HomePageTest.checkIfSliderBannerChangesPictures.executor": "Run",
-    "TestNG.HomePageTest.testExample.executor": "Debug",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.bb.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.HomePageTest.checkIfCarouselChangesPictures.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.checkIfSliderBannerChangesPictures.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.testExample.executor&quot;: &quot;Debug&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto\src\main\resources" />
@@ -275,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738856970541</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="pause, fetch methods, refactoring code">
+      <option name="closed" value="true" />
+      <created>1739191973458</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739191973459</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -287,7 +294,8 @@
     <MESSAGE value="carousel test" />
     <MESSAGE value="second test base" />
     <MESSAGE value="changed to localhost, added test" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed to localhost, added test" />
+    <MESSAGE value="pause, fetch methods, refactoring code" />
+    <option name="LAST_COMMIT_MESSAGE" value="pause, fetch methods, refactoring code" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
