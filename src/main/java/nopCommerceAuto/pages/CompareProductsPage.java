@@ -27,9 +27,6 @@ public class CompareProductsPage extends AbstractPage {
     @FindBy(xpath = "//div[@class='no-data']")
     private WebElement comparePageEmptyListText;
 
-    @FindBy(xpath = "//tr[@class='product-price']//td[@style='width:90%']")
-    private WebElement compareProductPrice;
-
     @FindBy(xpath = "//a[@class='picutre']")
     private WebElement singlePicture;
 
@@ -77,5 +74,6 @@ public class CompareProductsPage extends AbstractPage {
         return IntStream.range(0, titles.size())
                 .mapToObj(i -> new ProductInfo(titles.get(i), prices.get(i)))
                 .collect(Collectors.toList());
-    }}
+    }
+}
 

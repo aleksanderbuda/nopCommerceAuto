@@ -2,8 +2,6 @@ package nopCommerceAuto.model;
 
 import lombok.Getter;
 
-import java.util.logging.Logger;
-
 @Getter
 public class ProductInfo {
     @Getter
@@ -16,9 +14,8 @@ public class ProductInfo {
     }
 
     public String toString() {
-        return "ProductInfo{" +
-                "title='" + title + '\'' +
-                ", price='" + price + '\'' + '}';
+        return "ProductInfo {" +
+                "title='" + title + '\'' + ", price='" + price + '\'' + '}';
     }
 
 

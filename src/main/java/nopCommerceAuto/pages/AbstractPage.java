@@ -3,6 +3,7 @@ import lombok.Getter;
 import nopCommerceAuto.model.ProductInfo;
 
 import nopCommerceAuto.constants.Constants;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
@@ -19,7 +20,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Getter
-public abstract class AbstractPage implements Constants {
+public class AbstractPage implements Constants {
 
     @FindBy(xpath = "(//h1) | (//title)")
     private WebElement title;
@@ -59,7 +60,6 @@ public abstract class AbstractPage implements Constants {
 
     public boolean isPageOpened() {
         return getTitleText().equals(titleText) && getCurrentUrl().contains(pageUrl);
-
     }
 }
 

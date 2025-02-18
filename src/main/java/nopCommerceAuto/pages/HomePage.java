@@ -43,6 +43,9 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//a[@href='/computers']")
     private WebElement computersNavBar;
 
+    @FindBy(className = "ico-register")
+    private WebElement registerButton;
+
     private final WebDriverWait wait;
     private final Wait<WebDriver> fluentwait;
     private final Actions actions;
@@ -114,4 +117,16 @@ public class HomePage extends AbstractPage {
         notebooksLink.click();
         return new NotebooksPage(driver);
     }
+
+    public RegisterPage openRegisterPage() {
+        LOGGER.info("Opening the Register Page...");
+        registerButton.click();
+        return new RegisterPage(driver);
+    }
+
+
+
+
+
+
 }

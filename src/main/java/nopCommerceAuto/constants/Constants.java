@@ -24,6 +24,7 @@ public interface Constants {
 
 
 
+
         String CAROUSEL_GALAXY_IMAGE_URL = "https://demo.nopcommerce.com/images/thumbs/0000093_Slider Galaxy.png";
 
         String CAROUSEL_IPHONE_IMAGE_URL = "https://demo.nopcommerce.com/images/thumbs/0000094_Slider iphone.png";
@@ -34,7 +35,7 @@ public interface Constants {
 
         String HOME_PAGE_TITLE = "Your store. Home page title";
 
-        String REGISTER_PAGE_TITLE = "";
+        String REGISTER_PAGE_TITLE = "Your store. Register";
 
         String NOTEBOOKS_PAGE_TITLE = "Your store. Notebooks";
 
