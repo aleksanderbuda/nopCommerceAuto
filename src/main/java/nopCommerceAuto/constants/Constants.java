@@ -18,12 +18,15 @@ public interface Constants {
 
         String COMPARE_PRODUCT_PAGE_URL = URL + "/compareproducts";
 
-        String PRODUCT_PAGE_URL = URL + "example";
+        String PRODUCT_PAGE_URL = URL + "/example";
+
+        String CHECKOUT_PAGE_URL = URL + "/onepagecheckout#opc-billing";
+
+        String CART_PAGE_URL = URL +"/cart";
+
+
 
         String NOTEBOOKS_8GB_URL = URL + "/notebooks?viewmode=grid&orderby=0&pagesize=6&specs=9";
-
-
-
 
         String CAROUSEL_GALAXY_IMAGE_URL = "https://demo.nopcommerce.com/images/thumbs/0000093_Slider Galaxy.png";
 
@@ -42,6 +45,10 @@ public interface Constants {
         String COMPARE_PRODUCTS_PAGE_TITLE = "Your store. Compare Products";
 
         String PRODUCT_PAGE_TITLE = "";
+
+        String CHECKOUT_PAGE_TITLE = "Your store. Checkout";
+
+        String CART_PAGE_TITLE = "Your store. Shopping Cart";
 
 
 

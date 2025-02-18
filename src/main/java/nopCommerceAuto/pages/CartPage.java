@@ -5,11 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 @Getter
-public class CheckoutPage extends AbstractPage {
+public class CartPage extends AbstractPage {
 
-    public CheckoutPage(WebDriver driver) {
-        super(driver, PageTitles.CHECKOUT_PAGE_TITLE, Urls.CHECKOUT_PAGE_URL);
+    public CartPage(WebDriver driver) {
+        super(driver, PageTitles.CART_PAGE_TITLE, Urls.CART_PAGE_URL);
         PageFactory.initElements(driver, this);
-
     }
 }

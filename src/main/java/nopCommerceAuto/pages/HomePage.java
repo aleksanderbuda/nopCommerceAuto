@@ -34,7 +34,7 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//a[contains(@class, 'nivo-imageLink')]")
     private List<WebElement> sliderImageLinks;
 
-    @FindBy(xpath = "//div[@id=\"nivo-slider\"]")
+    @FindBy(xpath = "//div[@id='nivo-slider']")
     private WebElement carousel;
 
     @FindBy(xpath = "(//ul[@class='sublist first-level']//a)[2]")
