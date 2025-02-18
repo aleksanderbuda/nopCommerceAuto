@@ -129,4 +129,5 @@ public class NotebooksPage extends AbstractPage {
         compareProductListLink.click();
         return new CompareProductsPage(driver);
     }
+
 }

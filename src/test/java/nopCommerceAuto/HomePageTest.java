@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class HomePageTest extends BasePageTest {
+public class HomePageTest extends AbstractPageTest {
 
     @Test
     public void checkIfCarouselChangesPictures() {
