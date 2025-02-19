@@ -1,7 +1,6 @@
 package nopCommerceAuto.pages;
 
 import lombok.Getter;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -123,10 +122,4 @@ public class HomePage extends AbstractPage {
         registerButton.click();
         return new RegisterPage(driver);
     }
-
-
-
-
-
-
 }

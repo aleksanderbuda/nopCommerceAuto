@@ -1,10 +1,14 @@
 package nopCommerceAuto;
 
+import nopCommerceAuto.pages.CartPage;
 import nopCommerceAuto.utils.DriverFactory;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -67,7 +71,6 @@ public class AbstractPageTest {
                 RandomStringUtils.randomAlphabetic(1).toLowerCase() +
                 RandomStringUtils.randomNumeric(1);
         return pass + getRandomSpecialChar();
-
     }
 
     public static char getRandomSpecialChar() {
@@ -75,12 +78,6 @@ public class AbstractPageTest {
         String specialSymbols = "[$&+=?@#|/\"<>^*()%!]~`";
         return specialSymbols.toCharArray()[random.nextInt(specialSymbols.length())];
     }
-
-
-
-
-
-
 }
 
 

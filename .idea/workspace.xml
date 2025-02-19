@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="added verifyAddProductsToComparePage test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" afterDir="false" />
+    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="added pages, page object pattern">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/model/ProductInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/model/ProductInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CompareProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CompareProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/BasePageTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CompareProductsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CompareProductsPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/HomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +59,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered.executor": "Run",
     "TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor": "Run",
     "TestNG.HomePageTest.bb.executor": "Debug",
     "TestNG.HomePageTest.checkIfCarouselChangesPictures.executor": "Run",
@@ -91,7 +85,25 @@
       <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm">
+  <component name="RunManager" selected="TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered">
+    <configuration name="CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="nopCommerceAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nopCommerceAuto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.CheckoutPageTest" />
+      <option name="METHOD_NAME" value="verifyIfBillingAddressIsSavedOnceEntered" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CompareProductsPageTest.verifyAddProductsToComparePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
@@ -103,24 +115,6 @@
       <option name="PACKAGE_NAME" value="nopCommerceAuto" />
       <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.CompareProductsPageTest" />
       <option name="METHOD_NAME" value="verifyAddProductsToComparePage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageTest.checkIfCarouselChangesPictures" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="nopCommerceAuto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.HomePageTest" />
-      <option name="METHOD_NAME" value="checkIfCarouselChangesPictures" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -184,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered" />
         <item itemvalue="TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm" />
         <item itemvalue="TestNG.RegisterPageTest.verifyRequiredFieldOnRegistrationForm" />
         <item itemvalue="TestNG.RegisterPageTest.userRegistration" />
         <item itemvalue="TestNG.CompareProductsPageTest.verifyAddProductsToComparePage" />
-        <item itemvalue="TestNG.HomePageTest.checkIfCarouselChangesPictures" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +298,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739279929852</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="tests">
+      <option name="closed" value="true" />
+      <created>1739892229507</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739892229507</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added pages, page object pattern">
+      <option name="closed" value="true" />
+      <created>1739892659999</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739892659999</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -318,7 +328,9 @@
     <MESSAGE value="changed to localhost, added test" />
     <MESSAGE value="pause, fetch methods, refactoring code" />
     <MESSAGE value="added verifyAddProductsToComparePage test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added verifyAddProductsToComparePage test" />
+    <MESSAGE value="tests" />
+    <MESSAGE value="added pages, page object pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="added pages, page object pattern" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

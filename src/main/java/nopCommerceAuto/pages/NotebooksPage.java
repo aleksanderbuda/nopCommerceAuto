@@ -3,6 +3,7 @@ import nopCommerceAuto.model.ProductInfo;
 
 import lombok.Getter;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,6 +15,8 @@ import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
+import java.util.Optional;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Getter
@@ -46,6 +49,9 @@ public class NotebooksPage extends AbstractPage {
     @FindBy(xpath = "//a[@href='/compareproducts']")
     private WebElement compareProductListLink;
 
+    @FindBy(xpath = "//div[@class='buttons']/button[@class='button-2 product-box-add-to-cart-button']")
+    private List<WebElement> addToCartButtons;
+
     private static final String TITLE_LOCATOR = (".//h2[@class='product-title']//a");
 
     private static final String PRICE_LOCATOR = (".//span[@class='price actual-price']");
@@ -54,17 +60,20 @@ public class NotebooksPage extends AbstractPage {
 
     private final WebDriverWait wait;
     private final Wait<WebDriver> fluentwait;
+    private final Actions actions;
 
     public NotebooksPage(WebDriver driver) {
         super(driver, PageTitles.NOTEBOOKS_PAGE_TITLE, Urls.NOTEBOOKS_PAGE_URL);
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        this.actions = new Actions(driver, Duration.ofSeconds(5));
         this.fluentwait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofSeconds(1))
                 .ignoring(NoSuchElementException.class)
                 .ignoring(StaleElementReferenceException.class);
     }
+
     public List<ProductInfo> getProducts() {
         return getProductInfo(CONTAINER_LOCATOR, TITLE_LOCATOR, PRICE_LOCATOR);
     }
@@ -98,10 +107,12 @@ public class NotebooksPage extends AbstractPage {
 
     public boolean isCheckbox8GbClicked() {
         try {
-        return wait.until(ExpectedConditions.urlToBe(Urls.NOTEBOOKS_8GB_URL));
-    } catch (TimeoutException e) {
-        } return false;
+            return wait.until(ExpectedConditions.urlToBe(Urls.NOTEBOOKS_8GB_URL));
+        } catch (TimeoutException e) {
+        }
+        return false;
     }
+
     public void clickCompareButton(int products) {
         if (productItems.isEmpty()) {
             LOGGER.error("There are no available products");
@@ -129,5 +140,22 @@ public class NotebooksPage extends AbstractPage {
         compareProductListLink.click();
         return new CompareProductsPage(driver);
     }
+
+    public void clickFirstAddToCartButton() {
+        if (!addToCartButtons.isEmpty()) {
+            WebElement firstButton = addToCartButtons.get(1);
+            fluentwait.until(ExpectedConditions.elementToBeClickable(firstButton)).click();
+            fluentwait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//div[@class='bar-notification success']")));
+            fluentwait.until(ExpectedConditions.invisibilityOfElementLocated(
+                    By.xpath("//div[@class='bar-notification success']")));
+            LOGGER.info("Product from {} has been added to cart.", this.getClass().getSimpleName());
+
+        } else {
+            LOGGER.error("Could not find the first button for Add To Cart");
+
+        }
+    }
+
 
 }

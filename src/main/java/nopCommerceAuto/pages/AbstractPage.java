@@ -7,6 +7,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -25,17 +26,25 @@ public class AbstractPage implements Constants {
     @FindBy(xpath = "(//h1) | (//title)")
     private WebElement title;
 
+    @FindBy(className = "cart-label")
+    private WebElement cartButton;
+
+    @FindBy(xpath = "//button[@class='button-1 cart-button']")
+    private WebElement flyoutGoToCartButton;
+
     protected final Logger LOGGER = LogManager.getLogger(this.getClass());
     protected final WebDriver driver;
     protected final String titleText;
-    protected String pageUrl;
+    protected final String pageUrl;
     protected final WebDriverWait wait;
     protected final Wait<WebDriver> fluentwait;
+    protected final Actions actions;
 
     public AbstractPage(WebDriver driver, String title, String pageUrl){
         this.driver = driver;
         this.titleText = title;
         this.pageUrl = pageUrl;
+        this.actions = new Actions(driver, Duration.ofSeconds(5));
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         this.fluentwait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
@@ -60,6 +69,13 @@ public class AbstractPage implements Constants {
 
     public boolean isPageOpened() {
         return getTitleText().equals(titleText) && getCurrentUrl().contains(pageUrl);
+    }
+
+    public CartPage openCartPage() {
+        LOGGER.info("Opening the Cart Page...");
+        actions.moveToElement(cartButton).perform();
+        flyoutGoToCartButton.click();
+        return new CartPage(driver);
     }
 }
 
