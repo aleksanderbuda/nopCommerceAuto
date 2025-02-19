@@ -57,7 +57,6 @@ public class RegisterPageTest extends AbstractPageTest {
         Assert.assertTrue(registerPage.isPageOpened(), "Register Page is not opened");
 
         registerPage.clickRegisterButton();
-
         Assert.assertTrue(registerPage.areRegisterFieldsRequired(), "Required fields are not matching");
 
         String firstName = createRandomUsername();
