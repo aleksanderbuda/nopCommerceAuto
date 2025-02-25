@@ -15,8 +15,6 @@ import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Getter
@@ -141,10 +139,10 @@ public class NotebooksPage extends AbstractPage {
         return new CompareProductsPage(driver);
     }
 
-    public void clickFirstAddToCartButton() {
+    public void clickAddToCartButton() {
         if (!addToCartButtons.isEmpty()) {
-            WebElement firstButton = addToCartButtons.get(1);
-            fluentwait.until(ExpectedConditions.elementToBeClickable(firstButton)).click();
+            WebElement button = addToCartButtons.get(1);
+            fluentwait.until(ExpectedConditions.elementToBeClickable(button)).click();
             fluentwait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.xpath("//div[@class='bar-notification success']")));
             fluentwait.until(ExpectedConditions.invisibilityOfElementLocated(

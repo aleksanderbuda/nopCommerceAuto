@@ -1,14 +1,14 @@
 package nopCommerceAuto.utils;
 
-import lombok.extern.java.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.logging.Level;
 
-@Log
 public class PropertiesReader {
+    protected static final Logger LOGGER = LogManager.getLogger(PropertiesReader.class);
     private static Properties properties;
 
     static {
@@ -18,7 +18,7 @@ public class PropertiesReader {
             properties.load(input);
             input.close();
         } catch (IOException e) {
-            log.log(Level.WARNING, e.getMessage(), e);
+            LOGGER.warn("Error loading properties file", e);
         }
     }
 

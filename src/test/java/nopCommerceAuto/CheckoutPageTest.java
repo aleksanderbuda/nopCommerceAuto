@@ -1,9 +1,9 @@
 package nopCommerceAuto;
 
-import nopCommerceAuto.pages.CartPage;
-import nopCommerceAuto.pages.HomePage;
-import nopCommerceAuto.pages.NotebooksPage;
-import nopCommerceAuto.pages.RegisterPage;
+import net.bytebuddy.utility.RandomString;
+import nopCommerceAuto.pages.*;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -42,20 +42,43 @@ public class CheckoutPageTest extends AbstractPageTest {
 
         NotebooksPage notebooksPage = homePage.openNotebooksPage();
         Assert.assertTrue(notebooksPage.isPageOpened(), "Notebooks page is not opened");
-        notebooksPage.clickFirstAddToCartButton();
+        notebooksPage.clickAddToCartButton();
 
         CartPage cartPage = notebooksPage.openCartPage();
         Assert.assertTrue(cartPage.isPageOpened(), "Cart Page is not opened");
+        cartPage.clickTOSCheckbox();
 
+        CheckoutPage checkoutPage = cartPage.openCheckoutPage();
+        String selectedCountry = checkoutPage.selectRandomCountry();
 
+        String city = StringUtils.capitalize(RandomStringUtils.randomAlphabetic(7).toLowerCase());
+        String address = createRandomAddress();
+        String zipCode = RandomStringUtils.randomNumeric(5);
+        String phoneNumber = RandomStringUtils.randomAlphabetic(9);
 
+        checkoutPage.fillCity(city);
+        checkoutPage.fillAddress(address);
+        checkoutPage.fillZipCode(zipCode);
+        checkoutPage.fillPhoneNumber(phoneNumber);
+        checkoutPage.clickContinueButton();
 
+        checkoutPage.openCartPage();
+        cartPage.clickTOSCheckbox();
+        CheckoutPage reopenedCheckoutPage = cartPage.openCheckoutPage();
+
+        String savedBillingInfo = reopenedCheckoutPage.getSavedBillingAddressInfo();
+
+        String expectedBillingInfo = firstName + " " +
+                lastName + ", " +
+                selectedCountry + ", " +
+                city + ", " +
+                address + ", " +
+                zipCode;
+
+        softAssert.assertTrue(savedBillingInfo.contains(expectedBillingInfo),
+                "Saved billing address does not match expected values. Expected: " +
+                        expectedBillingInfo + ", Actual: " + savedBillingInfo);
 
         softAssert.assertAll();
-
-
-        //kliknąc checkout, wprowadzić cały adres, kliknąć continue
-        //cofnąć się i wejść jeszcze raz i sprawdzić czy zapisane dane znajdują się w zapisanym adresie
     }
-
 }

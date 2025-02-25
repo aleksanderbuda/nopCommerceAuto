@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="added pages, page object pattern">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/PropertiesReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
 }</component>
   <component name="ProjectId" id="2sIgGQYcXEp4mat3ErguixW1Hpj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -71,7 +72,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
   }
@@ -314,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739892659999</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added pages, page object pattern">
+      <option name="closed" value="true" />
+      <created>1739977531891</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739977531891</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

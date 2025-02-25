@@ -3,6 +3,7 @@ package nopCommerceAuto;
 import nopCommerceAuto.pages.CartPage;
 import nopCommerceAuto.utils.DriverFactory;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -71,6 +72,12 @@ public class AbstractPageTest {
                 RandomStringUtils.randomAlphabetic(1).toLowerCase() +
                 RandomStringUtils.randomNumeric(1);
         return pass + getRandomSpecialChar();
+    }
+
+    public static String createRandomAddress() {
+        int streetNumber = new Random().nextInt(8999) + 1000; // 1000 to 9999
+        String streetName = StringUtils.capitalize(RandomStringUtils.randomAlphabetic(10).toLowerCase());
+        return String.format("%d %s St", streetNumber, streetName);
     }
 
     public static char getRandomSpecialChar() {
