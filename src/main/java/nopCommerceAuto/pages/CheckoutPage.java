@@ -9,20 +9,37 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.Random;
 
 @Getter
 public class CheckoutPage extends AbstractPage {
 
-    @FindBy(id = "termsofservice")
-    private WebElement termsOfServiceCheckbox;
+    @FindBy(id = "BillingNewAddress_CountryId")
+    private WebElement countryDropdown;
 
-    @FindBy(id = "checkout")
-    private WebElement checkoutButton;
+    @FindBy(id = "BillingNewAddress_City")
+    private WebElement cityField;
 
+    @FindBy(id = "BillingNewAddress_Address1")
+    private WebElement addressLineOneField;
+
+    @FindBy(id = "BillingNewAddress_ZipPostalCode")
+    private WebElement zipCodeField;
+
+    @FindBy(id = "BillingNewAddress_PhoneNumber")
+    private WebElement phoneNumberField;
+
+    @FindBy(xpath = "//button[@type='button']/following-sibling::button[1]")
+    private WebElement continueButton;
+
+    @FindBy(id = "billing-address-select")
+    private WebElement savedBillingAddressInfo;
 
     private final WebDriverWait wait;
     private final Wait<WebDriver> fluentwait;
@@ -39,4 +56,56 @@ public class CheckoutPage extends AbstractPage {
                 .ignoring(NoSuchElementException.class)
                 .ignoring(StaleElementReferenceException.class);
     }
+
+    public String selectRandomCountry() {
+        LOGGER.info("Selecting a country...");
+        countryDropdown.click();
+        Select select = new Select(countryDropdown);
+        List<WebElement> options = select.getOptions();
+        int randomIndex = new Random().nextInt(options.size() - 1) + 1;
+        WebElement randomOption = options.get(randomIndex);
+        String selectedCountry = randomOption.getText();
+        select.selectByVisibleText(randomOption.getText());
+        LOGGER.info("Selected country: " + randomOption.getText());
+        return selectedCountry;
+    }
+
+    public String getSavedBillingAddressInfo() {
+        savedBillingAddressInfo.click();
+        Select select = new Select(savedBillingAddressInfo);
+        List<WebElement> options = select.getOptions();
+        String selectedOptionText = options.getFirst().getText();
+        LOGGER.info("Saved billing address info: " + selectedOptionText);
+        return selectedOptionText;
+    }
+
+    public void fillCity(String city) {
+        getCityField().sendKeys(city);
+    }
+
+    public void fillAddress(String address) {
+        getAddressLineOneField().sendKeys(address);
+    }
+
+    public void fillZipCode(String zipcode) {
+        getZipCodeField().sendKeys(zipcode);
+    }
+
+    public void fillPhoneNumber(String phone) {
+        getPhoneNumberField().sendKeys(phone);
+    }
+
+    public void clickContinueButton() {
+        try {
+            continueButton.click();
+            LOGGER.info("Continue button clicked successfully.");
+        } catch (Exception e) {
+            LOGGER.error("Failed to click Continue button: " + e.getMessage());
+            throw e; //
+        }
+    }
+
+
+
+
 }
