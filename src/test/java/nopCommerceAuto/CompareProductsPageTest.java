@@ -36,6 +36,7 @@ public class CompareProductsPageTest extends AbstractPageTest {
             ProductInfo notebooksPageSecondProduct = notebooksPageProducts.get(1);
 
             notebooksPage.clickCompareButton(2);
+            softAssert.assertTrue(notebooksPage.isSuccessBannerVisible());
 
             CompareProductsPage compareProductsPage = notebooksPage.openComparePage();
             Assert.assertTrue(compareProductsPage.isPageOpened(),

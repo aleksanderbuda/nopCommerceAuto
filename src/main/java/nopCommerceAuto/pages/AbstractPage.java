@@ -32,6 +32,9 @@ public class AbstractPage implements Constants {
     @FindBy(xpath = "//button[@class='button-1 cart-button']")
     private WebElement flyoutGoToCartButton;
 
+    @FindBy(linkText = "Wishlist")
+    private WebElement wishlistLink;
+
     protected final Logger LOGGER = LogManager.getLogger(this.getClass());
     protected final WebDriver driver;
     protected final String titleText;
@@ -76,6 +79,12 @@ public class AbstractPage implements Constants {
         actions.moveToElement(cartButton).perform();
         flyoutGoToCartButton.click();
         return new CartPage(driver);
+    }
+
+    public WishlistPage openWishlistPage() {
+        LOGGER.info("Opening the Wishlist Page...");
+        wishlistLink.click();
+        return new WishlistPage(driver);
     }
 }
 

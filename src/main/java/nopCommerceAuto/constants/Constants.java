@@ -22,7 +22,9 @@ public interface Constants {
 
         String CHECKOUT_PAGE_URL = URL + "/onepagecheckout#opc-billing";
 
-        String CART_PAGE_URL = URL +"/cart";
+        String CART_PAGE_URL = URL + "/cart";
+
+        String WISHLIST_PAGE_URL = URL + "/wishlist";
 
 
 
@@ -49,6 +51,8 @@ public interface Constants {
         String CHECKOUT_PAGE_TITLE = "Your store. Checkout";
 
         String CART_PAGE_TITLE = "Your store. Shopping Cart";
+
+        String WISHLIST_PAGE_TITLE = "Your store. Wishlist";
 
 
 
