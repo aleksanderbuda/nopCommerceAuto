@@ -26,6 +26,8 @@ public interface Constants {
 
         String WISHLIST_PAGE_URL = URL + "/wishlist";
 
+        String SHAREABLE_WISHLIST_PAGE_URL = URL + "/wishlist";
+
 
 
         String NOTEBOOKS_8GB_URL = URL + "/notebooks?viewmode=grid&orderby=0&pagesize=6&specs=9";

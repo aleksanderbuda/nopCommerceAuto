@@ -15,6 +15,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Getter
@@ -110,6 +111,7 @@ public class NotebooksPage extends AbstractPage {
         try {
             return wait.until(ExpectedConditions.urlToBe(Urls.NOTEBOOKS_8GB_URL));
         } catch (TimeoutException e) {
+            LOGGER.error("Could not check the 8GB box", e);
         }
         return false;
     }
@@ -143,21 +145,21 @@ public class NotebooksPage extends AbstractPage {
             WebElement button = addToCartButtons.get(1);
             fluentwait.until(ExpectedConditions.elementToBeClickable(button)).click();
             LOGGER.info("Product from {} has been added to cart.", this.getClass().getSimpleName());
-
         } else {
             LOGGER.error("Could not find the first button for Add To Cart");
 
         }
     }
+
     public void clickFirstWishlistButton() {
         try {
-            addToCartButtons.stream()
+            addToWishlistButton.stream()
             .filter(WebElement::isDisplayed)
                     .skip(1)
                     .findFirst()
                     .ifPresent(WebElement::click);
         } catch (StaleElementReferenceException e) {
-            LOGGER.error("Error clicking wishlistbutton", e);
+            LOGGER.error("Error clicking Wishlist button", e);
             throw e;
         }
     }
@@ -168,9 +170,10 @@ public class NotebooksPage extends AbstractPage {
                    By.xpath("//div[@class='bar-notification success']")));
            fluentwait.until(ExpectedConditions.invisibilityOfElementLocated(
                    By.xpath("//div[@class='bar-notification success']")));
+           LOGGER.info("Success banner appeared and then disappeared");
            return true;
        } catch (Exception e) {
-           LOGGER.error("Success message is not visible");
+           LOGGER.error("Success message banner is not visible");
        } return false;
     }
 }
