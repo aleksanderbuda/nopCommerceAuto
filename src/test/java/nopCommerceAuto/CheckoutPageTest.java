@@ -43,6 +43,7 @@ public class CheckoutPageTest extends AbstractPageTest {
         NotebooksPage notebooksPage = homePage.openNotebooksPage();
         Assert.assertTrue(notebooksPage.isPageOpened(), "Notebooks page is not opened");
         notebooksPage.clickAddToCartButton();
+        softAssert.assertTrue(notebooksPage.isSuccessBannerVisible(), "Success banner is not visible");
 
         CartPage cartPage = notebooksPage.openCartPage();
         Assert.assertTrue(cartPage.isPageOpened(), "Cart Page is not opened");

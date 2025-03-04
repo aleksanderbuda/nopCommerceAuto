@@ -50,6 +50,9 @@ public class NotebooksPage extends AbstractPage {
     @FindBy(xpath = "//div[@class='buttons']/button[@class='button-2 product-box-add-to-cart-button']")
     private List<WebElement> addToCartButtons;
 
+    @FindBy(xpath = "//button[@class='button-2 add-to-wishlist-button']")
+    private List<WebElement> addToWishlistButton;
+
     private static final String TITLE_LOCATOR = (".//h2[@class='product-title']//a");
 
     private static final String PRICE_LOCATOR = (".//span[@class='price actual-price']");
@@ -121,10 +124,6 @@ public class NotebooksPage extends AbstractPage {
                 .forEach(button -> {
                     try {
                         fluentwait.until(ExpectedConditions.elementToBeClickable(button)).click();
-                        fluentwait.until(ExpectedConditions.visibilityOfElementLocated(
-                                By.xpath("//div[@class='bar-notification success']")));
-                        fluentwait.until(ExpectedConditions.invisibilityOfElementLocated(
-                                By.xpath("//div[@class='bar-notification success']")));
                         LOGGER.info("Product from {} has been added to comparison list.", this.getClass().getSimpleName());
                     } catch (TimeoutException e) {
                         LOGGER.error("Notification did not appear or disappear in time");
@@ -143,10 +142,6 @@ public class NotebooksPage extends AbstractPage {
         if (!addToCartButtons.isEmpty()) {
             WebElement button = addToCartButtons.get(1);
             fluentwait.until(ExpectedConditions.elementToBeClickable(button)).click();
-            fluentwait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//div[@class='bar-notification success']")));
-            fluentwait.until(ExpectedConditions.invisibilityOfElementLocated(
-                    By.xpath("//div[@class='bar-notification success']")));
             LOGGER.info("Product from {} has been added to cart.", this.getClass().getSimpleName());
 
         } else {
@@ -154,6 +149,28 @@ public class NotebooksPage extends AbstractPage {
 
         }
     }
+    public void clickFirstWishlistButton() {
+        try {
+            addToCartButtons.stream()
+            .filter(WebElement::isDisplayed)
+                    .skip(1)
+                    .findFirst()
+                    .ifPresent(WebElement::click);
+        } catch (StaleElementReferenceException e) {
+            LOGGER.error("Error clicking wishlistbutton", e);
+            throw e;
+        }
+    }
 
-
+    public boolean isSuccessBannerVisible() {
+       try {
+           fluentwait.until(ExpectedConditions.visibilityOfElementLocated(
+                   By.xpath("//div[@class='bar-notification success']")));
+           fluentwait.until(ExpectedConditions.invisibilityOfElementLocated(
+                   By.xpath("//div[@class='bar-notification success']")));
+           return true;
+       } catch (Exception e) {
+           LOGGER.error("Success message is not visible");
+       } return false;
+    }
 }
