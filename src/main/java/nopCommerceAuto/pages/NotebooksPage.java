@@ -15,7 +15,6 @@ import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Getter
@@ -36,11 +35,11 @@ public class NotebooksPage extends AbstractPage {
     @FindBy(xpath = "//h2[@class='product-title']/a")
     private WebElement productTitle;
 
+    @FindBy(xpath = "//h2[@class='product-title']/a")
+    private List<WebElement> productTitles;
+
     @FindBy(xpath = "//div[@class='picture']")
     private WebElement pictureImageLink;
-
-    @FindBy(xpath = "//span[@class='price actual-price']")
-    private WebElement productPrice;
 
     @FindBy(xpath = "//div[@class='product-item']")
     private List<WebElement> productInfo;
@@ -82,7 +81,6 @@ public class NotebooksPage extends AbstractPage {
 
     public List<ProductInfo> getProductInfo(String containerLocator, String titleLocator, String priceLocator) {
         List<WebElement> productElements = driver.findElements(By.xpath(containerLocator));
-
         List<ProductInfo> products = productElements.stream()
                 .map(element -> {
                     try {
@@ -130,8 +128,36 @@ public class NotebooksPage extends AbstractPage {
                     } catch (TimeoutException e) {
                         LOGGER.error("Notification did not appear or disappear in time");
                     }
-
                 });
+    }
+
+    public void selectProduct(int productNum) {
+        productTitles.stream()
+                .skip(productNum)
+                .limit(1)
+                .findFirst()
+                .ifPresentOrElse(button -> {
+                    try {
+                        fluentwait.until(ExpectedConditions.elementToBeClickable(button)).click();
+                        LOGGER.info("Clicked product at index {}.", productNum);
+                    } catch (TimeoutException e) {
+                        LOGGER.error("Could not click the desired product at index " + productNum, e);
+                        throw new RuntimeException("Could not click product at index " + productNum, e);
+                    }
+                }, () -> {
+                    throw new RuntimeException("Product number " + productNum + " is out of bounds.");
+                });
+    }
+    public List<String> getProductTitles(List<Integer> productIndexes) {
+        return productIndexes.stream()
+                .map(index -> {
+                    selectProduct(index);
+                    ProductPage productPage = new ProductPage(driver);
+                    String title = productPage.getName();
+                    driver.navigate().back();
+                    return title;
+                })
+                .collect(Collectors.toList());
     }
 
     public CompareProductsPage openComparePage() {

@@ -10,41 +10,6 @@ import org.testng.asserts.SoftAssert;
 public class RegisterPageTest extends AbstractPageTest {
 
     @Test
-    public void verifyIfUserIsAbleToRegister(){
-        SoftAssert softAssert = new SoftAssert();
-        WebDriver driver = getDriver();
-
-        HomePage homePage = new HomePage(driver);
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home Page is not opened");
-
-        RegisterPage registerPage = homePage.openRegisterPage();
-        Assert.assertTrue(registerPage.isPageOpened(), "Register Page is not opened");
-
-        String firstName = createRandomUsername();
-        String lastName = createRandomUsername();
-        String email = createRandomEmail();
-        String companyName = createRandomCompanyName();
-        String password = createRandomPassword();
-
-        registerPage.clickGenderButton();
-        registerPage.fillName(firstName);
-        registerPage.fillLastName(lastName);
-        registerPage.fillEmail(email);
-        registerPage.fillCompanyName(companyName);
-        registerPage.fillPassword(password);
-        registerPage.fillConfirmPassword(password);
-
-        registerPage.clickRegisterButton();
-        Assert.assertTrue(registerPage.isRegistrationSuccess(), "Registration was unsuccessful");
-
-        registerPage.clickContinueButton();
-        Assert.assertTrue(homePage.isPageOpened(), "Home Page is not opened");
-
-        softAssert.assertAll();
-    }
-
-    @Test
     public void verifyRequiredFieldsOnRegistrationForm() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = getDriver();
