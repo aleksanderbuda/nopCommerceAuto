@@ -26,9 +26,7 @@ public interface Constants {
 
         String WISHLIST_PAGE_URL = URL + "/wishlist";
 
-        String SHAREABLE_WISHLIST_PAGE_URL = URL + "/wishlist";
-
-
+        String RECENTLY_VIEWED_PAGE_URL = URL + "/recentlyviewedproducts";
 
         String NOTEBOOKS_8GB_URL = URL + "/notebooks?viewmode=grid&orderby=0&pagesize=6&specs=9";
 
@@ -55,6 +53,11 @@ public interface Constants {
         String CART_PAGE_TITLE = "Your store. Shopping Cart";
 
         String WISHLIST_PAGE_TITLE = "Your store. Wishlist";
+
+        String SHAREABLE_WISHLIST_PAGE_TITLE = "Wishlist of";
+
+        String RECENTLY_VIEWED_PAGE_TITLE = "Your store. Recently Viewed Products";
+
 
 
 

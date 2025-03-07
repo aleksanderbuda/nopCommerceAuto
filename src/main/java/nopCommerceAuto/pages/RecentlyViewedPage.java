@@ -12,29 +12,24 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Getter
-public class ProductPage extends AbstractPage {
+public class RecentlyViewedPage extends AbstractPage {
 
-    @FindBy(xpath ="//p[@class='content']")
-    private WebElement greenBarProductAddedToCompareText;
+    @FindBy(xpath = "//h2[@class='product-title']")
+    private List<WebElement> titles;
 
-    @FindBy(xpath = "//p[@class='content']/a[@href='/compareproducts']")
-    private WebElement greenBarProductComparisonLink;
-
-    @FindBy(xpath = "//div[@class='product-price']/span")
-    private WebElement productPagePrice;
-
-    @FindBy(xpath = "//div[@class='product-name']")
-    private WebElement productPageName;
+    @FindBy(xpath = "//span[@class='price actual-price']")
+    private List<WebElement> prices;
 
     private final WebDriverWait wait;
     private final Wait<WebDriver> fluentwait;
     private final Actions actions;
 
-    public ProductPage(WebDriver driver) {
-        super(driver,  PageTitles.PRODUCT_PAGE_TITLE, Urls.PRODUCT_PAGE_URL);
+    public RecentlyViewedPage(WebDriver driver) {
+        super(driver, PageTitles.RECENTLY_VIEWED_PAGE_TITLE, Urls.RECENTLY_VIEWED_PAGE_URL);
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         this.actions = new Actions(driver, Duration.ofSeconds(5));
@@ -45,18 +40,22 @@ public class ProductPage extends AbstractPage {
                 .ignoring(StaleElementReferenceException.class);
     }
 
-    public String getPrice() {
-        return productPagePrice.getText();
+    public String getRecName(int index) {
+        return titles.stream()
+                .skip(index)
+                .limit(1)
+                .map(WebElement::getText)
+                .findFirst()
+                .orElseThrow(() -> new IndexOutOfBoundsException("Index " + index + " is out of bounds"));
     }
 
-    public String getName() {
-        return productPageName.getText();
+    public String getRecPrice(int index) {
+        return prices.stream()
+                .skip(index)
+                .limit(1)
+                .map(WebElement::getText)
+                .findFirst()
+                .orElseThrow(() -> new IndexOutOfBoundsException("Index " + index + " is out of bounds"));
     }
-
-
-
-
-
-
 
 }

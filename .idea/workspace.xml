@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RecentlyViewedPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RecentlyViewedPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/WishlistPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/WishlistPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,9 +70,12 @@
     "TestNG.HomePageTest.checkIfCarouselChangesPictures.executor": "Run",
     "TestNG.HomePageTest.checkIfSliderBannerChangesPictures.executor": "Run",
     "TestNG.HomePageTest.testExample.executor": "Debug",
+    "TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem.executor": "Run",
+    "TestNG.RecentlyViewedPageTest.recentlyViewedItemsUpdateWithEachProduct.executor": "Run",
     "TestNG.RegisterPageTest.userRegistration.executor": "Run",
     "TestNG.RegisterPageTest.verifyRequiredFieldOnRegistrationForm.executor": "Run",
     "TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm.executor": "Run",
+    "TestNG.WishlistPageTest.checkIfUserCanAddToCartItemFromShareableWishlist.executor": "Run",
     "TestNG.WishlistPageTest.checkWishlistShareableLink.executor": "Run",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -84,25 +94,7 @@
       <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.WishlistPageTest.checkWishlistShareableLink">
-    <configuration name="CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="nopCommerceAuto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.CheckoutPageTest" />
-      <option name="METHOD_NAME" value="verifyIfBillingAddressIsSavedOnceEntered" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem">
     <configuration name="CompareProductsPageTest.verifyAddProductsToComparePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
@@ -121,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterPageTest.verifyRequiredFieldOnRegistrationForm" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +122,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RegisterPageTest" />
-      <option name="METHOD_NAME" value="verifyRequiredFieldOnRegistrationForm" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RecentlyViewedPageTest" />
+      <option name="METHOD_NAME" value="checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -139,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterPageTest.verifyRequiredFieldsOnRegistrationForm" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RecentlyViewedPageTest.recentlyViewedItemsUpdateWithEachProduct" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
         <pattern>
@@ -148,8 +140,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RegisterPageTest" />
-      <option name="METHOD_NAME" value="verifyRequiredFieldsOnRegistrationForm" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RecentlyViewedPageTest" />
+      <option name="METHOD_NAME" value="recentlyViewedItemsUpdateWithEachProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WishlistPageTest.checkIfUserCanAddToCartItemFromShareableWishlist" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="nopCommerceAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nopCommerceAuto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.WishlistPageTest" />
+      <option name="METHOD_NAME" value="checkIfUserCanAddToCartItemFromShareableWishlist" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -177,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
+        <item itemvalue="TestNG.RecentlyViewedPageTest.recentlyViewedItemsUpdateWithEachProduct" />
+        <item itemvalue="TestNG.WishlistPageTest.checkIfUserCanAddToCartItemFromShareableWishlist" />
         <item itemvalue="TestNG.WishlistPageTest.checkWishlistShareableLink" />
         <item itemvalue="TestNG.CompareProductsPageTest.verifyAddProductsToComparePage" />
-        <item itemvalue="TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered" />
-        <item itemvalue="TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm" />
-        <item itemvalue="TestNG.RegisterPageTest.verifyRequiredFieldOnRegistrationForm" />
       </list>
     </recent_temporary>
   </component>
@@ -337,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741088406635</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="tests">
+      <option name="closed" value="true" />
+      <created>1741093994465</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1741093994465</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -357,19 +375,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="tests" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java</url>
-          <line>13</line>
-          <properties class="nopCommerceAuto.WishlistPageTest" method="checkWishlistShareableLink">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
         <watch expression="homePage" />

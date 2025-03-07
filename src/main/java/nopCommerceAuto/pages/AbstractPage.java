@@ -1,9 +1,7 @@
 package nopCommerceAuto.pages;
 import lombok.Getter;
-import nopCommerceAuto.model.ProductInfo;
 
 import nopCommerceAuto.constants.Constants;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
@@ -15,10 +13,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 @Getter
 public class AbstractPage implements Constants {
@@ -34,6 +29,21 @@ public class AbstractPage implements Constants {
 
     @FindBy(linkText = "Wishlist")
     private WebElement wishlistLink;
+
+    @FindBy(className = "product-name")
+    private WebElement productName;
+
+    @FindBy(className = "product-unit-price")
+    private WebElement unitPrice;
+
+    @FindBy(linkText = "Recently viewed products")
+    private WebElement recentlyViewedLink;
+
+    @FindBy(xpath = "(//ul[@class='sublist first-level']//a)[2]")
+    private WebElement notebooksLink;
+
+    @FindBy(xpath = "//a[@href='/computers']")
+    private WebElement computersNavBar;
 
     protected final Logger LOGGER = LogManager.getLogger(this.getClass());
     protected final WebDriver driver;
@@ -85,6 +95,41 @@ public class AbstractPage implements Constants {
         LOGGER.info("Opening the Wishlist Page...");
         wishlistLink.click();
         return new WishlistPage(driver);
+    }
+
+    public RecentlyViewedPage openRecentlyViewed() {
+        LOGGER.info("Opening the Recently Viewed Products Page...");
+        recentlyViewedLink.click();
+        return new RecentlyViewedPage(driver);
+    }
+
+    public NotebooksPage openNotebooksPage() {
+        LOGGER.info("Opening the Notebooks Page...");
+        actions.moveToElement(computersNavBar).perform();
+        fluentwait.until(ExpectedConditions.elementToBeClickable(notebooksLink)).click();
+        return new NotebooksPage(driver);
+    }
+
+    public String getProductName() {
+        try {
+            String name = productName.getText();
+            LOGGER.info("Retrieved product name: " + name);
+            return name;
+        } catch (Exception e) {
+            LOGGER.error("Could not find Product name");
+            throw new RuntimeException("Failed to retrieve the product name", e);
+        }
+    }
+
+    public String getProductPrice() {
+        try {
+            String price = unitPrice.getText();
+            LOGGER.info("Retrieved unit price: " + price);
+            return price;
+        } catch (Exception e) {
+            LOGGER.error("Could not find Product price");
+            throw new RuntimeException("Failed to retrieve product price", e);
+        }
     }
 }
 

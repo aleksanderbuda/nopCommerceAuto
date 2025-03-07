@@ -12,14 +12,14 @@ public class WishlistPage extends AbstractPage {
     @FindBy(className = "share-link")
     private WebElement shareLink;
 
-    @FindBy(className = "product-name")
-    private WebElement productName;
-
-    @FindBy(className = "product-unit-price")
-    private WebElement unitPrice;
-
-    @FindBy(className = "addtocartbutton")
+    @FindBy(name = "addtocartbutton")
     private WebElement addToCartButton;
+
+    @FindBy(name = "addtocart")
+    private WebElement addToCartCheckbox;
+
+    @FindBy(xpath = "//h1")
+    private WebElement tableTitle;
 
 
     public WishlistPage(WebDriver driver) {
@@ -37,6 +37,14 @@ public class WishlistPage extends AbstractPage {
         }
     }
 
+    public String getTableTitle() {
+        return tableTitle.getText();
+    }
+
+    public void clickAddToCartCheckbox() {
+        addToCartCheckbox.click();
+    }
+
     public String getShareableWishlistUrl () {
         try {
             String url = shareLink.getText();
@@ -48,25 +56,14 @@ public class WishlistPage extends AbstractPage {
         }
     }
 
-    public String getProductName() {
+    public CartPage clickAddToCartButton() {
         try {
-            String name = productName.getText();
-            LOGGER.info("Retrieved product name: " + name);
-            return name;
+            LOGGER.info("Clicking on Add to Cart button");
+            addToCartButton.click();
         } catch (Exception e) {
-            LOGGER.error("Could not find Product name");
-            throw new RuntimeException("Failed to retrieve the product name", e);
+            LOGGER.error("Could not click the Add to Cart", e);
+            throw new RuntimeException("Failed to retrieve Add to Cart button", e);
         }
-    }
-
-    public String getProductPrice() {
-        try {
-            String price = unitPrice.getText();
-            LOGGER.info("Retrieved unit price: " + price);
-            return price;
-        } catch (Exception e) {
-            LOGGER.error("Could not find Product price");
-            throw new RuntimeException("Failed to retrieve product price", e);
-        }
+        return new CartPage(driver);
     }
 }

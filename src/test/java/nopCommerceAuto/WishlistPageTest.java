@@ -1,5 +1,7 @@
 package nopCommerceAuto;
 
+import nopCommerceAuto.constants.Constants;
+import nopCommerceAuto.pages.CartPage;
 import nopCommerceAuto.pages.HomePage;
 import nopCommerceAuto.pages.NotebooksPage;
 import nopCommerceAuto.pages.WishlistPage;
@@ -43,13 +45,10 @@ public class WishlistPageTest extends AbstractPageTest {
         softAssert.assertAll();
     }
 
-//zrobić test z data providerem
-
 @Test
 public void checkIfUserCanAddToCartItemFromShareableWishlist() {
     SoftAssert softAssert = new SoftAssert();
     WebDriver driver = getDriver();
-
 
     HomePage homePage = new HomePage(driver);
     homePage.open();
@@ -64,10 +63,22 @@ public void checkIfUserCanAddToCartItemFromShareableWishlist() {
     Assert.assertTrue(wishlistPage.isPageOpened(), "Wishlist page is not opened");
 
     wishlistPage.clickShareableWishlistUrl();
+    softAssert.assertEquals(Constants.PageTitles.SHAREABLE_WISHLIST_PAGE_TITLE, wishlistPage.getTableTitle(), "Title of the Shareable Wishlist page dose not match");
+    String shareableWishlistProductName = wishlistPage.getProductName();
+    String shareableWishlistProductPrice = wishlistPage.getProductPrice();
 
+    wishlistPage.clickAddToCartCheckbox();
 
+    CartPage cartPage = wishlistPage.clickAddToCartButton();
+    Assert.assertTrue(cartPage.isPageOpened(), "Cart page is not opened");
 
+    String cartProductName = cartPage.getProductName();
+    String cartProductPrice = cartPage.getProductPrice();
 
+    softAssert.assertEquals(shareableWishlistProductName, cartProductName, "Product name is not the same");
+    softAssert.assertEquals(shareableWishlistProductPrice,cartProductPrice,  "Product price is not the same");
 
+    softAssert.assertAll();
+    }
 }
-}
+//zrobić test z data providerem

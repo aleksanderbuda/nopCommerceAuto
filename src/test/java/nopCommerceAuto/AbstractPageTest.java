@@ -85,6 +85,8 @@ public class AbstractPageTest {
         String specialSymbols = "[$&+=?@#|/\"<>^*()%!]~`";
         return specialSymbols.toCharArray()[random.nextInt(specialSymbols.length())];
     }
+
+
 }
 
 
