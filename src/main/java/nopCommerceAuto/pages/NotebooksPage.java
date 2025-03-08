@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
@@ -143,22 +144,29 @@ public class NotebooksPage extends AbstractPage {
                     } catch (TimeoutException e) {
                         LOGGER.error("Could not click the desired product at index " + productNum, e);
                         throw new RuntimeException("Could not click product at index " + productNum, e);
-                    }
-                }, () -> {
+                    }}, () -> {
                     throw new RuntimeException("Product number " + productNum + " is out of bounds.");
                 });
     }
+
+// pobieranie pojedynczego tytułu produktu
+    private String getProductTitle(int productIndex) {
+        selectProduct(productIndex);
+        ProductPage productPage = new ProductPage(driver);
+        String title = productPage.getName();
+        LOGGER.info("Collected title: {}", title);
+        driver.navigate().back();
+        return title;
+    }
+
+    // mapowanie listy indeksów na listę tytułów - rozbite na 2 metody żeby nie łamało SRP
     public List<String> getProductTitles(List<Integer> productIndexes) {
         return productIndexes.stream()
-                .map(index -> {
-                    selectProduct(index);
-                    ProductPage productPage = new ProductPage(driver);
-                    String title = productPage.getName();
-                    driver.navigate().back();
-                    return title;
-                })
+                .map(this::getProductTitle)
                 .collect(Collectors.toList());
     }
+
+
 
     public CompareProductsPage openComparePage() {
         LOGGER.info("Opening Compare Products Page...");
