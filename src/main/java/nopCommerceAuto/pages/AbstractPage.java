@@ -106,7 +106,7 @@ public class AbstractPage implements Constants {
     public NotebooksPage openNotebooksPage() {
         LOGGER.info("Opening the Notebooks Page...");
         actions.moveToElement(computersNavBar).perform();
-        fluentwait.until(ExpectedConditions.elementToBeClickable(notebooksLink)).click();
+        fluentwait.until(ExpectedConditions.visibilityOf(notebooksLink)).click();
         return new NotebooksPage(driver);
     }
 
