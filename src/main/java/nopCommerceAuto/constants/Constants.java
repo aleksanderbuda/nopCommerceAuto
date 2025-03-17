@@ -28,6 +28,8 @@ public interface Constants {
 
         String RECENTLY_VIEWED_PAGE_URL = URL + "/recentlyviewedproducts";
 
+        String LOGIN_PAGE_URL = URL + "/login?returnUrl=%2F";
+
         String NOTEBOOKS_8GB_URL = URL + "/notebooks?viewmode=grid&orderby=0&pagesize=6&specs=9";
 
         String CAROUSEL_GALAXY_IMAGE_URL = "https://demo.nopcommerce.com/images/thumbs/0000093_Slider Galaxy.png";
@@ -57,6 +59,8 @@ public interface Constants {
         String SHAREABLE_WISHLIST_PAGE_TITLE = "Wishlist of";
 
         String RECENTLY_VIEWED_PAGE_TITLE = "Your store. Recently Viewed Products";
+
+        String LOGIN_PAGE_TITLE = "Your store. Login";
 
 
 

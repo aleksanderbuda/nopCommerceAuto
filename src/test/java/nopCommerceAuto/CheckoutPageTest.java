@@ -68,13 +68,7 @@ public class CheckoutPageTest extends AbstractPageTest {
         CheckoutPage reopenedCheckoutPage = cartPage.openCheckoutPage();
 
         String savedBillingInfo = reopenedCheckoutPage.getSavedBillingAddressInfo();
-
-        String expectedBillingInfo = firstName + " " +
-                lastName + ", " +
-                selectedCountry + ", " +
-                city + ", " +
-                address + ", " +
-                zipCode;
+        String expectedBillingInfo = firstName + " " +  lastName + ", " +  selectedCountry + ", " +  city + ", " +  address + ", " +  zipCode;
 
         softAssert.assertTrue(savedBillingInfo.contains(expectedBillingInfo),
                 "Saved billing address does not match expected values. Expected: " +

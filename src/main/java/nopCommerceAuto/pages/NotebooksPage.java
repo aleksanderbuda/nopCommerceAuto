@@ -166,8 +166,6 @@ public class NotebooksPage extends AbstractPage {
                 .collect(Collectors.toList());
     }
 
-
-
     public CompareProductsPage openComparePage() {
         LOGGER.info("Opening Compare Products Page...");
         compareProductListLink.click();

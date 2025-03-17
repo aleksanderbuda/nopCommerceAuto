@@ -1,0 +1,17 @@
+[
+  {
+    "email": "invalid-email",
+    "password": "ValidPass123!",
+    "expectSuccess": false
+  },
+  {
+    "email": "",
+    "password": "ValidPass123!",
+    "expectSuccess": false
+  },
+  {
+    "email": "",
+    "password": "",
+    "expectSuccess": false
+  }
+]
