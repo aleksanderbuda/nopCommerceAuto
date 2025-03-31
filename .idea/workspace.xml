@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="login test with data provider">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/HomePageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/LoginPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RecentlyViewedPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RecentlyViewedPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="parallel tests, testng, pom, jenkinsfile, chromedriver, properties" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
@@ -382,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742224395990</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="parallel tests, testng, pom, jenkinsfile, chromedriver, properties">
+      <option name="closed" value="true" />
+      <created>1743425791446</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1743425791446</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -400,7 +391,8 @@
     <MESSAGE value="added test" />
     <MESSAGE value="tests" />
     <MESSAGE value="login test with data provider" />
-    <option name="LAST_COMMIT_MESSAGE" value="login test with data provider" />
+    <MESSAGE value="parallel tests, testng, pom, jenkinsfile, chromedriver, properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="parallel tests, testng, pom, jenkinsfile, chromedriver, properties" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
