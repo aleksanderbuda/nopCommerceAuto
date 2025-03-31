@@ -10,11 +10,9 @@
     </Appenders>
 
     <Loggers>
-        <!-- Making them quiet as they dump everything into console-->
         <Logger name="io.github.bonigarcia" level="WARN"/>
         <Logger name="org.testng" level="WARN"/>
 
-        <!-- Debug to Info cleaner console -->
         <Root level="INFO">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="File"/>

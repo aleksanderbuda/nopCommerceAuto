@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 
 public class HomePageTest extends AbstractPageTest {
 
-    @Test
+    @Test()
     public void checkIfCarouselChangesPictures() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = getDriver();

@@ -5,6 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class DriverFactory {
 
@@ -18,17 +23,37 @@ public class DriverFactory {
         WebDriverManager.firefoxdriver().setup();
     }
 
-    public static WebDriver createDriver() {
-        String browser = PropertiesReader.getProperty("browser");
+//    public static WebDriver createDriver() {
+//        String browser = PropertiesReader.getProperty("browser");
+//
+//        switch (browser) {
+//            case "chrome" -> driver.set(new ChromeDriver());
+//            case "edge" -> driver.set(new EdgeDriver());
+//            case "firefox" -> driver.set(new FirefoxDriver());
+//            default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
+//        }
+//        return driver.get();
+//    }
+public static WebDriver createDriver() throws MalformedURLException {
+    String browser = PropertiesReader.getProperty("browser");
+    String remoteUrl = PropertiesReader.getProperty("remoteUrl");
 
+    if (remoteUrl != null) {
+        // Konfiguracja dla Grid
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName(browser);
+        driver.set(new RemoteWebDriver(new URL(remoteUrl), capabilities));
+    } else {
+        // Lokalne przeglądarki (twój istniejący kod)
         switch (browser) {
             case "chrome" -> driver.set(new ChromeDriver());
             case "edge" -> driver.set(new EdgeDriver());
             case "firefox" -> driver.set(new FirefoxDriver());
             default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
-        return driver.get();
     }
+    return driver.get();
+}
 
     public static WebDriver getDriver() {
         if (driver.get() == null) {
@@ -38,8 +63,13 @@ public class DriverFactory {
     }
 
     public static void quitDriver() {
-        if (driver.get() != null) {
-            driver.get().quit();
+        try {
+            if (driver.get() != null) {
+                driver.get().quit();
+            }
+        } catch (Exception e) {
+            System.err.println("Failed to quit driver: " + e.getMessage());
+        } finally {
             driver.remove();
         }
     }
