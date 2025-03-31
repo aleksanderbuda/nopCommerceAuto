@@ -13,6 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.net.MalformedURLException;
 import java.util.Random;
 
 public class AbstractPageTest {
@@ -22,7 +23,7 @@ public class AbstractPageTest {
     protected final Logger LOGGER = LogManager.getLogger(this.getClass());
 
     @BeforeMethod
-    public void SetUp() {
+    public void SetUp() throws MalformedURLException {
         driver = DriverFactory.createDriver();
     }
 

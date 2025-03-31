@@ -44,5 +44,4 @@ public class LoginPageTest extends AbstractPageTest {
 
         softAssert.assertAll();
     }
-
 }

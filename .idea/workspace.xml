@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/model/LoginTestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/JsonDataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/LoginPageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/LoginDataProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/invalid_email_format.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/valid_invalid_credentials.json" afterDir="false" />
+    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="login test with data provider">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/AbstractPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/CheckoutPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/HomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/LoginPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RecentlyViewedPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RecentlyViewedPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/RegisterPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +33,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -64,6 +70,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml.executor": "Run",
     "TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered.executor": "Run",
     "TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor": "Run",
     "TestNG.HomePageTest.bb.executor": "Debug",
@@ -86,7 +93,8 @@
     "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -98,7 +106,17 @@
       <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginPageTest.testLoginWithDataCredentials">
+  <component name="RunManager" selected="TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml">
+    <configuration name="C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="nopCommerceAuto" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng_suites/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
@@ -170,31 +188,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="nopCommerceAuto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RecentlyViewedPageTest" />
-      <option name="METHOD_NAME" value="checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml" />
         <item itemvalue="TestNG.LoginPageTest.testLoginWithDataCredentials" />
         <item itemvalue="TestNG.LoginPageTest.testLoginWithInvalidEmailFormat" />
         <item itemvalue="TestNG.LoginPageTest.testLoginWithDataProvider" />
         <item itemvalue="TestNG.LoginPageTest" />
-        <item itemvalue="TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
       </list>
     </recent_temporary>
   </component>
@@ -374,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741426378130</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="login test with data provider">
+      <option name="closed" value="true" />
+      <created>1742224395990</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1742224395990</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -391,7 +399,8 @@
     <MESSAGE value="added pages, page object pattern" />
     <MESSAGE value="added test" />
     <MESSAGE value="tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <MESSAGE value="login test with data provider" />
+    <option name="LAST_COMMIT_MESSAGE" value="login test with data provider" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

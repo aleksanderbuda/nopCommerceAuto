@@ -12,7 +12,7 @@ import org.testng.asserts.SoftAssert;
 
 public class WishlistPageTest extends AbstractPageTest {
 
-    @Test
+    @Test()
     public void checkWishlistShareableLink() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = getDriver();
@@ -45,7 +45,7 @@ public class WishlistPageTest extends AbstractPageTest {
         softAssert.assertAll();
     }
 
-@Test
+@Test()
 public void checkIfUserCanAddToCartItemFromShareableWishlist() {
     SoftAssert softAssert = new SoftAssert();
     WebDriver driver = getDriver();
@@ -81,4 +81,3 @@ public void checkIfUserCanAddToCartItemFromShareableWishlist() {
     softAssert.assertAll();
     }
 }
-//zrobić test z data providerem

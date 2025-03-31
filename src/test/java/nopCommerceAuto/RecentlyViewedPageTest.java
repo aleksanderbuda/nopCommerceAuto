@@ -14,7 +14,7 @@ import java.util.List;
 
 public class RecentlyViewedPageTest extends AbstractPageTest {
 
-    @Test
+    @Test()
     public void checkIfRecentlyViewedItemsUpdateThePageWithEveryItem() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = getDriver();
@@ -41,5 +41,4 @@ public class RecentlyViewedPageTest extends AbstractPageTest {
 
         softAssert.assertAll();
     }
-
 }

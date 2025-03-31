@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel Suite" parallel="methods" thread-count="4">
+    <test name="nopCommerce Tests">
+        <classes>
+            <class name="nopCommerceAuto.LoginPageTest"/>
+            <class name="nopCommerceAuto.WishlistPageTest"/>
+            <class name="nopCommerceAuto.CheckoutPageTest"/>
+            <class name="nopCommerceAuto.CompareProductsPageTest"/>
+            <class name="nopCommerceAuto.HomePageTest"/>
+            <class name="nopCommerceAuto.RecentlyViewedPageTest"/>
+            <class name="nopCommerceAuto.RegisterPageTest"/>
+        </classes>
+    </test>
+</suite>

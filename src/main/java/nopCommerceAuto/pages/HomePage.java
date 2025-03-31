@@ -36,7 +36,6 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//div[@id='nivo-slider']")
     private WebElement carousel;
 
-
     @FindBy(className = "ico-register")
     private WebElement registerButton;
 
@@ -104,13 +103,6 @@ public class HomePage extends AbstractPage {
         new WebDriverWait(driver, Duration.ofMillis(1500));
         wait.until(ExpectedConditions.elementToBeClickable(inactiveSliderButton)).click();
     }
-
-//    public NotebooksPage openNotebooksPage() {
-//        LOGGER.info("Opening the Notebooks Page...");
-//        actions.moveToElement(computersNavBar).perform();
-//        fluentwait.until(ExpectedConditions.elementToBeClickable(notebooksLink)).click();
-//        return new NotebooksPage(driver);
-//    }
 
     public RegisterPage openRegisterPage() {
         LOGGER.info("Opening the Register Page...");

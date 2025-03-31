@@ -14,7 +14,6 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.Map;
 
 @Getter
 public class LoginPage extends AbstractPage {

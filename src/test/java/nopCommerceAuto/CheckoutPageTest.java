@@ -1,6 +1,5 @@
 package nopCommerceAuto;
 
-import net.bytebuddy.utility.RandomString;
 import nopCommerceAuto.pages.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -11,7 +10,7 @@ import org.testng.asserts.SoftAssert;
 
 public class CheckoutPageTest extends AbstractPageTest {
 
-    @Test
+    @Test()
     public void verifyIfBillingAddressIsSavedOnceEntered() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = getDriver();
@@ -68,7 +67,12 @@ public class CheckoutPageTest extends AbstractPageTest {
         CheckoutPage reopenedCheckoutPage = cartPage.openCheckoutPage();
 
         String savedBillingInfo = reopenedCheckoutPage.getSavedBillingAddressInfo();
-        String expectedBillingInfo = firstName + " " +  lastName + ", " +  selectedCountry + ", " +  city + ", " +  address + ", " +  zipCode;
+        String expectedBillingInfo = firstName + " " +
+                lastName + ", " +
+                selectedCountry + ", " +
+                city + ", " +
+                address + ", " +
+                zipCode;
 
         softAssert.assertTrue(savedBillingInfo.contains(expectedBillingInfo),
                 "Saved billing address does not match expected values. Expected: " +

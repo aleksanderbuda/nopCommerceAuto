@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 
 public class RegisterPageTest extends AbstractPageTest {
 
-    @Test
+    @Test()
     public void verifyRequiredFieldsOnRegistrationForm() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = getDriver();
