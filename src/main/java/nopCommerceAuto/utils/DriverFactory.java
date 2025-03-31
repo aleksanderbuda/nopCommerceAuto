@@ -39,12 +39,10 @@ public static WebDriver createDriver() throws MalformedURLException {
     String remoteUrl = PropertiesReader.getProperty("remoteUrl");
 
     if (remoteUrl != null) {
-        // Konfiguracja dla Grid
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName(browser);
         driver.set(new RemoteWebDriver(new URL(remoteUrl), capabilities));
     } else {
-        // Lokalne przeglądarki (twój istniejący kod)
         switch (browser) {
             case "chrome" -> driver.set(new ChromeDriver());
             case "edge" -> driver.set(new EdgeDriver());
