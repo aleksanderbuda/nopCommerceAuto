@@ -56,7 +56,7 @@ public class AbstractPageTest {
 
     public static String createRandomEmail() {
         String email = RandomStringUtils.randomAlphabetic(1,5).toLowerCase();
-        return email + "@example.com";
+        return email + "@example.comm";
     }
 
     public static String createRandomCompanyName() {
