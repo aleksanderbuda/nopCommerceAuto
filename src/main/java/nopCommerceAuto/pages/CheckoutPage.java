@@ -60,13 +60,14 @@ public class CheckoutPage extends AbstractPage {
     public String selectRandomCountry() {
         LOGGER.info("Selecting a country...");
         countryDropdown.click();
+
         Select select = new Select(countryDropdown);
         List<WebElement> options = select.getOptions();
         int randomIndex = new Random().nextInt(options.size() - 1) + 1;
         WebElement randomOption = options.get(randomIndex);
+
         String selectedCountry = randomOption.getText();
         select.selectByVisibleText(randomOption.getText());
-        LOGGER.info("Selected country: " + randomOption.getText());
         return selectedCountry;
     }
 
@@ -74,9 +75,7 @@ public class CheckoutPage extends AbstractPage {
         savedBillingAddressInfo.click();
         Select select = new Select(savedBillingAddressInfo);
         List<WebElement> options = select.getOptions();
-        String selectedOptionText = options.getFirst().getText();
-        LOGGER.info("Saved billing address info: " + selectedOptionText);
-        return selectedOptionText;
+        return options.getFirst().getText();
     }
 
     public void fillCity(String city) {

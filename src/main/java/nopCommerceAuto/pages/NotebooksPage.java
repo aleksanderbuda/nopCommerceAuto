@@ -125,7 +125,6 @@ public class NotebooksPage extends AbstractPage {
                 .forEach(button -> {
                     try {
                         fluentwait.until(ExpectedConditions.elementToBeClickable(button)).click();
-                        LOGGER.info("Product from {} has been added to comparison list.", this.getClass().getSimpleName());
                     } catch (TimeoutException e) {
                         LOGGER.error("Notification did not appear or disappear in time");
                     }
@@ -167,7 +166,6 @@ public class NotebooksPage extends AbstractPage {
     }
 
     public CompareProductsPage openComparePage() {
-        LOGGER.info("Opening Compare Products Page...");
         compareProductListLink.click();
         return new CompareProductsPage(driver);
     }

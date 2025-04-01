@@ -29,7 +29,6 @@ public class WishlistPage extends AbstractPage {
 
     public void clickShareableWishlistUrl() {
         try {
-            LOGGER.info("Clicking on shareable wishlist URL");
             shareLink.click();
         } catch (Exception e) {
             LOGGER.error("Could not click the Shareable wishlist URL", e);
@@ -48,7 +47,6 @@ public class WishlistPage extends AbstractPage {
     public String getShareableWishlistUrl () {
         try {
             String url = shareLink.getText();
-            LOGGER.info("Retrieved shareable wishlist URL: " + url);
             return url;
         } catch (Exception e) {
             LOGGER.error("Could not find Wishlist URL", e);
@@ -58,7 +56,6 @@ public class WishlistPage extends AbstractPage {
 
     public CartPage clickAddToCartButton() {
         try {
-            LOGGER.info("Clicking on Add to Cart button");
             addToCartButton.click();
         } catch (Exception e) {
             LOGGER.error("Could not click the Add to Cart", e);

@@ -7,6 +7,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
+import listener.EventListener;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -23,35 +25,31 @@ public class DriverFactory {
         WebDriverManager.firefoxdriver().setup();
     }
 
-//    public static WebDriver createDriver() {
-//        String browser = PropertiesReader.getProperty("browser");
-//
-//        switch (browser) {
-//            case "chrome" -> driver.set(new ChromeDriver());
-//            case "edge" -> driver.set(new EdgeDriver());
-//            case "firefox" -> driver.set(new FirefoxDriver());
-//            default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
-//        }
-//        return driver.get();
-//    }
-public static WebDriver createDriver() throws MalformedURLException {
-    String browser = PropertiesReader.getProperty("browser");
-    String remoteUrl = PropertiesReader.getProperty("remoteUrl");
+    public static WebDriver createDriver() throws MalformedURLException {
+        String browser = PropertiesReader.getProperty("browser");
+        String remoteUrl = PropertiesReader.getProperty("remoteUrl");
 
-    if (remoteUrl != null) {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName(browser);
-        driver.set(new RemoteWebDriver(new URL(remoteUrl), capabilities));
-    } else {
-        switch (browser) {
-            case "chrome" -> driver.set(new ChromeDriver());
-            case "edge" -> driver.set(new EdgeDriver());
-            case "firefox" -> driver.set(new FirefoxDriver());
-            default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
+        WebDriver rawDriver;
+
+        if (remoteUrl != null) {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setBrowserName(browser);
+            rawDriver = new RemoteWebDriver(new URL(remoteUrl), capabilities);
+        } else {
+            switch (browser) {
+                case "chrome" -> rawDriver = new ChromeDriver();
+                case "edge" -> rawDriver = new EdgeDriver();
+                case "firefox" -> rawDriver = new FirefoxDriver();
+                default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
+            }
         }
+
+        EventListener listener = new EventListener();
+        WebDriver decoratedDriver = new EventFiringDecorator<>(listener).decorate(rawDriver);
+
+        driver.set(decoratedDriver);
+        return decoratedDriver;
     }
-    return driver.get();
-}
 
     public static WebDriver getDriver() {
         if (driver.get() == null) {

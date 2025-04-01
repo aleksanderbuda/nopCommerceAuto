@@ -75,9 +75,7 @@ public class AbstractPage implements Constants {
     }
 
     public void open() {
-        LOGGER.info("Opening the {} page", this.getClass().getSimpleName());
         driver.get(pageUrl);
-        LOGGER.info("{} has opened succesfully", this.getClass().getSimpleName());
     }
 
     public boolean isPageOpened() {
@@ -85,26 +83,22 @@ public class AbstractPage implements Constants {
     }
 
     public CartPage openCartPage() {
-        LOGGER.info("Opening the Cart Page...");
         actions.moveToElement(cartButton).perform();
         flyoutGoToCartButton.click();
         return new CartPage(driver);
     }
 
     public WishlistPage openWishlistPage() {
-        LOGGER.info("Opening the Wishlist Page...");
         wishlistLink.click();
         return new WishlistPage(driver);
     }
 
     public RecentlyViewedPage openRecentlyViewed() {
-        LOGGER.info("Opening the Recently Viewed Products Page...");
         recentlyViewedLink.click();
         return new RecentlyViewedPage(driver);
     }
 
     public NotebooksPage openNotebooksPage() {
-        LOGGER.info("Opening the Notebooks Page...");
         actions.moveToElement(computersNavBar).perform();
         fluentwait.until(ExpectedConditions.visibilityOf(notebooksLink)).click();
         return new NotebooksPage(driver);

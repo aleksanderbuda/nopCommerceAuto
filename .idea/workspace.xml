@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="parallel tests, testng, pom, jenkinsfile, chromedriver, properties" />
+    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="parallel tests, testng, pom, jenkinsfile, chromedriver, properties">
+      <change afterPath="$PROJECT_DIR$/src/main/java/listener/EventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/retry/AnnotationTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/retry/RetryAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CompareProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CompareProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/ProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/WishlistPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/WishlistPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/services/org.testng.ITestNGListener" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/services/org.testng.ITestNGListener" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/listener/TestNGListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -25,6 +42,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="new-feature" />
+                    <option name="lastUsedInstant" value="1743426807" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1743426806" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,6 +93,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml.executor": "Run",
     "TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml.executor": "Run",
     "TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered.executor": "Run",
     "TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor": "Run",
@@ -88,19 +129,12 @@
       <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto\src\main\java" />
       <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="listener" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml">
-    <configuration name="C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="nopCommerceAuto" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng_suites/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CompareProductsPageTest.verifyAddProductsToComparePage">
+    <configuration name="CompareProductsPageTest.verifyAddProductsToComparePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
         <pattern>
@@ -109,8 +143,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.LoginPageTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.CompareProductsPageTest" />
+      <option name="METHOD_NAME" value="verifyAddProductsToComparePage" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -135,7 +170,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTest.testLoginWithDataProvider" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
         <pattern>
@@ -144,8 +179,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.LoginPageTest" />
-      <option name="METHOD_NAME" value="testLoginWithDataProvider" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RecentlyViewedPageTest" />
+      <option name="METHOD_NAME" value="checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -153,7 +188,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTest.testLoginWithInvalidEmailFormat" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegisterPageTest.verifyRequiredFieldsOnRegistrationForm" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
         <pattern>
@@ -162,8 +197,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.LoginPageTest" />
-      <option name="METHOD_NAME" value="testLoginWithInvalidEmailFormat" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RegisterPageTest" />
+      <option name="METHOD_NAME" value="verifyRequiredFieldsOnRegistrationForm" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WishlistPageTest.checkWishlistShareableLink" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="nopCommerceAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nopCommerceAuto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.WishlistPageTest" />
+      <option name="METHOD_NAME" value="checkWishlistShareableLink" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -173,11 +226,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml" />
+        <item itemvalue="TestNG.CompareProductsPageTest.verifyAddProductsToComparePage" />
         <item itemvalue="TestNG.LoginPageTest.testLoginWithDataCredentials" />
-        <item itemvalue="TestNG.LoginPageTest.testLoginWithInvalidEmailFormat" />
-        <item itemvalue="TestNG.LoginPageTest.testLoginWithDataProvider" />
-        <item itemvalue="TestNG.LoginPageTest" />
+        <item itemvalue="TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
+        <item itemvalue="TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm" />
+        <item itemvalue="TestNG.WishlistPageTest.checkWishlistShareableLink" />
       </list>
     </recent_temporary>
   </component>

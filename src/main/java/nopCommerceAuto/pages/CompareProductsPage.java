@@ -54,7 +54,6 @@ public class CompareProductsPage extends AbstractPage {
     }
 
     public List<ProductInfo> getProductInfoFromTable() {
-        LOGGER.info("Retrieving product titles and prices...");
         List<String> titles = driver.findElements(By.xpath(TITLE_LOCATOR))
                 .stream()
                 .map(WebElement::getText)
