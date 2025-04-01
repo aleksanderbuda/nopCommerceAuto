@@ -172,10 +172,6 @@ public class RegisterPage extends AbstractPage {
             boolean isLastNameErrorCorrect = isLastNameErrorVisible();
             boolean isEmailErrorCorrect = isEmailErrorVisible();
             boolean isPasswordErrorCorrect = isPasswordErrorVisible();
-            LOGGER.info("First Name Error Visible: " + isFirstNameErrorCorrect);
-            LOGGER.info("Last Name Error Visible: " + isLastNameErrorCorrect);
-            LOGGER.info("Email Error Visible: " + isEmailErrorCorrect);
-            LOGGER.info("Password Error Visible: " + isPasswordErrorCorrect);
 
             return isFirstNameErrorCorrect && isLastNameErrorCorrect
                     && isEmailErrorCorrect && isPasswordErrorCorrect;
