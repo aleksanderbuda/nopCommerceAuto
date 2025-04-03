@@ -2,6 +2,7 @@
 <suite name="Parallel Suite" parallel="methods" thread-count="4">
     <listeners>
         <listener class-name="retry.AnnotationTransformer"/>
+        <listener class-name="allureListener.AllureListener"/>
     </listeners>
     <test name="nopCommerce Tests">
         <classes>

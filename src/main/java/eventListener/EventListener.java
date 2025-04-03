@@ -1,4 +1,4 @@
-package listener;
+package eventListener;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverListener;

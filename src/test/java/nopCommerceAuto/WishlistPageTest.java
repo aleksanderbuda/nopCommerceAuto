@@ -1,5 +1,7 @@
 package nopCommerceAuto;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import nopCommerceAuto.constants.Constants;
 import nopCommerceAuto.pages.CartPage;
 import nopCommerceAuto.pages.HomePage;
@@ -9,10 +11,11 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
+@Epic("Regression Tests")
+@Feature("Wishlist Page")
 public class WishlistPageTest extends AbstractPageTest {
 
-    @Test()
+    @Test(description = "Check if user is able to access wishlist with shareable link")
     public void checkWishlistShareableLink() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = getDriver();
