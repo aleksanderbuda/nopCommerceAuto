@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="parallel tests, testng, pom, jenkinsfile, chromedriver, properties">
-      <change afterPath="$PROJECT_DIR$/src/main/java/listener/EventListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/retry/AnnotationTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/retry/RetryAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="listener, retry analyzer, logger decorator">
+      <change afterPath="$PROJECT_DIR$/src/test/java/allureListener/AllureListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/AbstractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CompareProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CompareProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/WishlistPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/WishlistPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/listener/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eventListener/EventListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/services/org.testng.ITestNGListener" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/services/org.testng.ITestNGListener" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/listener/TestNGListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -50,12 +47,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature-branch" />
+                    <option name="lastUsedInstant" value="1743526526" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="new-feature" />
-                    <option name="lastUsedInstant" value="1743426807" />
+                    <option name="lastUsedInstant" value="1743526239" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1743426806" />
+                    <option name="lastUsedInstant" value="1743526192" />
                   </RecentBranch>
                 </list>
               </option>
@@ -114,6 +115,7 @@
     "TestNG.WishlistPageTest.checkWishlistShareableLink.executor": "Run",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/java",
     "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -426,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743425791446</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="listener, retry analyzer, logger decorator">
+      <option name="closed" value="true" />
+      <created>1743526261854</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1743526261854</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -445,7 +455,8 @@
     <MESSAGE value="tests" />
     <MESSAGE value="login test with data provider" />
     <MESSAGE value="parallel tests, testng, pom, jenkinsfile, chromedriver, properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="parallel tests, testng, pom, jenkinsfile, chromedriver, properties" />
+    <MESSAGE value="listener, retry analyzer, logger decorator" />
+    <option name="LAST_COMMIT_MESSAGE" value="listener, retry analyzer, logger decorator" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
