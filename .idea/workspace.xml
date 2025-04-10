@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="listener, retry analyzer, logger decorator">
-      <change afterPath="$PROJECT_DIR$/src/test/java/allureListener/AllureListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listener/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eventListener/EventListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nopCommerceAuto/WishlistPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,15 +44,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="feature-branch" />
-                    <option name="lastUsedInstant" value="1743526526" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="new-feature" />
-                    <option name="lastUsedInstant" value="1743526239" />
+                    <option name="lastUsedInstant" value="1743688586" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1743526192" />
+                    <option name="lastUsedInstant" value="1743688383" />
                   </RecentBranch>
                 </list>
               </option>
@@ -90,39 +82,39 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml.executor": "Run",
-    "TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml.executor": "Run",
-    "TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered.executor": "Run",
-    "TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor": "Run",
-    "TestNG.HomePageTest.bb.executor": "Debug",
-    "TestNG.HomePageTest.checkIfCarouselChangesPictures.executor": "Run",
-    "TestNG.HomePageTest.checkIfSliderBannerChangesPictures.executor": "Run",
-    "TestNG.HomePageTest.testExample.executor": "Debug",
-    "TestNG.LoginPageTest.executor": "Run",
-    "TestNG.LoginPageTest.testLoginWithDataCredentials.executor": "Run",
-    "TestNG.LoginPageTest.testLoginWithDataProvider.executor": "Run",
-    "TestNG.LoginPageTest.testLoginWithInvalidEmailFormat.executor": "Run",
-    "TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem.executor": "Run",
-    "TestNG.RecentlyViewedPageTest.recentlyViewedItemsUpdateWithEachProduct.executor": "Run",
-    "TestNG.RegisterPageTest.userRegistration.executor": "Run",
-    "TestNG.RegisterPageTest.verifyRequiredFieldOnRegistrationForm.executor": "Run",
-    "TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm.executor": "Run",
-    "TestNG.WishlistPageTest.checkIfUserCanAddToCartItemFromShareableWishlist.executor": "Run",
-    "TestNG.WishlistPageTest.checkWishlistShareableLink.executor": "Run",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/java",
-    "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.bb.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.HomePageTest.checkIfCarouselChangesPictures.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.checkIfSliderBannerChangesPictures.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.testExample.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.LoginPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageTest.testLoginWithDataCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageTest.testLoginWithDataProvider.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageTest.testLoginWithInvalidEmailFormat.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RecentlyViewedPageTest.recentlyViewedItemsUpdateWithEachProduct.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegisterPageTest.userRegistration.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegisterPageTest.verifyRequiredFieldOnRegistrationForm.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WishlistPageTest.checkIfUserCanAddToCartItemFromShareableWishlist.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WishlistPageTest.checkWishlistShareableLink.executor&quot;: &quot;Run&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto\src\main\resources" />
@@ -135,7 +127,35 @@
       <recent name="listener" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CompareProductsPageTest.verifyAddProductsToComparePage">
+  <component name="RunManager" selected="TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered">
+    <configuration name="C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="nopCommerceAuto" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="nopCommerceAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nopCommerceAuto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
+      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.CheckoutPageTest" />
+      <option name="METHOD_NAME" value="verifyIfBillingAddressIsSavedOnceEntered" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CompareProductsPageTest.verifyAddProductsToComparePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerceAuto" />
       <extension name="coverage">
@@ -190,58 +210,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterPageTest.verifyRequiredFieldsOnRegistrationForm" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="nopCommerceAuto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RegisterPageTest" />
-      <option name="METHOD_NAME" value="verifyRequiredFieldsOnRegistrationForm" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WishlistPageTest.checkWishlistShareableLink" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="nopCommerceAuto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.WishlistPageTest" />
-      <option name="METHOD_NAME" value="checkWishlistShareableLink" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered" />
+        <item itemvalue="TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml" />
         <item itemvalue="TestNG.CompareProductsPageTest.verifyAddProductsToComparePage" />
         <item itemvalue="TestNG.LoginPageTest.testLoginWithDataCredentials" />
         <item itemvalue="TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
-        <item itemvalue="TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm" />
-        <item itemvalue="TestNG.WishlistPageTest.checkWishlistShareableLink" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -436,7 +413,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743526261854</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="listener, retry analyzer, logger decorator">
+      <option name="closed" value="true" />
+      <created>1743688466624</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1743688466624</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
