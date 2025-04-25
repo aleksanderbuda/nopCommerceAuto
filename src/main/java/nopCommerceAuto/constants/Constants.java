@@ -61,9 +61,5 @@ public interface Constants {
         String RECENTLY_VIEWED_PAGE_TITLE = "Your store. Recently Viewed Products";
 
         String LOGIN_PAGE_TITLE = "Your store. Login";
-
-
-
-
     }
 }

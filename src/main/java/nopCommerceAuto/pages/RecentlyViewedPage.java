@@ -57,5 +57,4 @@ public class RecentlyViewedPage extends AbstractPage {
                 .findFirst()
                 .orElseThrow(() -> new IndexOutOfBoundsException("Index " + index + " is out of bounds"));
     }
-
 }

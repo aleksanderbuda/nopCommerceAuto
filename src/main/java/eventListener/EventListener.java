@@ -32,7 +32,6 @@ public class EventListener implements WebDriverListener {
         LOGGER.addHandler(handler);
     }
 
-
     @Override
     public void beforeGet(WebDriver driver, String url) {
         LOGGER.info("Navigating to: " + url);

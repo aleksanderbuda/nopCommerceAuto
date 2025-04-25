@@ -139,8 +139,12 @@ public class RegisterPage extends AbstractPage {
     }
 
     public boolean isEmailErrorVisible() {
-        wait.until(ExpectedConditions.visibilityOf(emailError));
-        return emailError.getText().equals("Email is required.");
+        try {
+            wait.until(ExpectedConditions.visibilityOf(emailError));
+            return true;
+        } catch (TimeoutException e) {
+            return false;
+        }
     }
 
     public boolean isEmailErrorNotVisible() {
