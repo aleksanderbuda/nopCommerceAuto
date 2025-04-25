@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88073de-0c8c-4e46-8feb-79bc395df857" name="Changes" comment="listener, retry analyzer, logger decorator">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/RunCucumberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/context/TestContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/hooks/TestHooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/CartSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/CheckoutSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/CompareProductsSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/HomePageSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginPageSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/NotebooksPageSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/ProductPageSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/RecentlyViewedSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/RegisterPageSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/WishlistPageSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/login.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/register.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/utils/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eventListener/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eventListener/EventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/model/ProductInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/model/ProductInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/ComputersPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/NotebooksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RecentlyViewedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RecentlyViewedPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nopCommerceAuto/pages/RegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,39 +106,49 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.HomePageTest.bb.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.HomePageTest.checkIfCarouselChangesPictures.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.HomePageTest.checkIfSliderBannerChangesPictures.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.HomePageTest.testExample.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.LoginPageTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginPageTest.testLoginWithDataCredentials.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginPageTest.testLoginWithDataProvider.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginPageTest.testLoginWithInvalidEmailFormat.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RecentlyViewedPageTest.recentlyViewedItemsUpdateWithEachProduct.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RegisterPageTest.userRegistration.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RegisterPageTest.verifyRequiredFieldOnRegistrationForm.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.WishlistPageTest.checkIfUserCanAddToCartItemFromShareableWishlist.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.WishlistPageTest.checkWishlistShareableLink.executor&quot;: &quot;Run&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Feature: login.executor": "Run",
+    "Cucumber Java.Feature: register.executor": "Run",
+    "Cucumber Java.Scenario: Registration with invalid email formats.executor": "Run",
+    "Cucumber Java.Scenario: Registration with missing required field.executor": "Run",
+    "Cucumber Java.Scenario: Successful login with valid credentials.executor": "Run",
+    "Cucumber Java.Scenario: Successful login.executor": "Run",
+    "Cucumber Java.Scenario: Successful registration with random data.executor": "Run",
+    "Cucumber Java.Scenario: Successful registration with valid data.executor": "Run",
+    "JUnit.CucumberTestRunner.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml.executor": "Run",
+    "TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/testng.xml.executor": "Run",
+    "TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered.executor": "Run",
+    "TestNG.CompareProductsPageTest.verifyAddProductsToComparePage.executor": "Run",
+    "TestNG.HomePageTest.bb.executor": "Debug",
+    "TestNG.HomePageTest.checkIfCarouselChangesPictures.executor": "Run",
+    "TestNG.HomePageTest.checkIfSliderBannerChangesPictures.executor": "Run",
+    "TestNG.HomePageTest.testExample.executor": "Debug",
+    "TestNG.LoginPageTest.executor": "Run",
+    "TestNG.LoginPageTest.testLoginWithDataCredentials.executor": "Run",
+    "TestNG.LoginPageTest.testLoginWithDataProvider.executor": "Run",
+    "TestNG.LoginPageTest.testLoginWithInvalidEmailFormat.executor": "Run",
+    "TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem.executor": "Run",
+    "TestNG.RecentlyViewedPageTest.recentlyViewedItemsUpdateWithEachProduct.executor": "Run",
+    "TestNG.RegisterPageTest.userRegistration.executor": "Run",
+    "TestNG.RegisterPageTest.verifyRequiredFieldOnRegistrationForm.executor": "Run",
+    "TestNG.RegisterPageTest.verifyRequiredFieldsOnRegistrationForm.executor": "Run",
+    "TestNG.WishlistPageTest.checkIfUserCanAddToCartItemFromShareableWishlist.executor": "Run",
+    "TestNG.WishlistPageTest.checkWishlistShareableLink.executor": "Run",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/java",
+    "last_opened_file_path": "C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\budaa\Desktop\project_java\nopCommerceAuto\src\main\resources" />
@@ -127,96 +161,113 @@
       <recent name="listener" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered">
-    <configuration name="C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Successful login with valid credentials">
+    <configuration name="Feature: register" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/register.feature" />
+      <option name="GLUE" value="cucumber" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="nopCommerceAuto" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng_suites/regression.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: register" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Registration with invalid email formats" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/register.feature" />
+      <option name="GLUE" value="cucumber.steps cucumber.hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="nopCommerceAuto" />
+      <option name="NAME_FILTER" value="^Registration with invalid email formats$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Registration with invalid email formats$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Registration with invalid email formats" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.CheckoutPageTest" />
-      <option name="METHOD_NAME" value="verifyIfBillingAddressIsSavedOnceEntered" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompareProductsPageTest.verifyAddProductsToComparePage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Registration with missing required field" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/register.feature" />
+      <option name="GLUE" value="cucumber.steps cucumber.hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="nopCommerceAuto" />
+      <option name="NAME_FILTER" value="^Registration with missing required field$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Registration with missing required field$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Registration with missing required field" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.CompareProductsPageTest" />
-      <option name="METHOD_NAME" value="verifyAddProductsToComparePage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTest.testLoginWithDataCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Successful login with valid credentials" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/login.feature" />
+      <option name="GLUE" value="cucumber.steps cucumber.hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="nopCommerceAuto" />
+      <option name="NAME_FILTER" value="^Successful login with valid credentials$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Successful login with valid credentials$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Successful login with valid credentials" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.LoginPageTest" />
-      <option name="METHOD_NAME" value="testLoginWithDataCredentials" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Successful registration with random data" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/register.feature" />
+      <option name="GLUE" value="cucumber" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="nopCommerceAuto" />
+      <option name="NAME_FILTER" value="^Successful registration with random data$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Successful registration with random data$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Successful registration with random data" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="nopCommerceAuto.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="nopCommerceAuto" />
-      <option name="MAIN_CLASS_NAME" value="nopCommerceAuto.RecentlyViewedPageTest" />
-      <option name="METHOD_NAME" value="checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CheckoutPageTest.verifyIfBillingAddressIsSavedOnceEntered" />
-        <item itemvalue="TestNG.C:/Users/budaa/Desktop/project_java/nopCommerceAuto/src/test/resources/testng_suites/regression.xml" />
-        <item itemvalue="TestNG.CompareProductsPageTest.verifyAddProductsToComparePage" />
-        <item itemvalue="TestNG.LoginPageTest.testLoginWithDataCredentials" />
-        <item itemvalue="TestNG.RecentlyViewedPageTest.checkIfRecentlyViewedItemsUpdateThePageWithEveryItem" />
+        <item itemvalue="Cucumber Java.Scenario: Successful login with valid credentials" />
+        <item itemvalue="Cucumber Java.Scenario: Successful registration with random data" />
+        <item itemvalue="Cucumber Java.Scenario: Registration with missing required field" />
+        <item itemvalue="Cucumber Java.Scenario: Registration with invalid email formats" />
+        <item itemvalue="Cucumber Java.Feature: register" />
       </list>
     </recent_temporary>
   </component>

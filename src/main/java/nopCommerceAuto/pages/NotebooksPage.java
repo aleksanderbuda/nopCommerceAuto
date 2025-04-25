@@ -148,7 +148,6 @@ public class NotebooksPage extends AbstractPage {
                 });
     }
 
-// pobieranie pojedynczego tytułu produktu
     private String getProductTitle(int productIndex) {
         selectProduct(productIndex);
         ProductPage productPage = new ProductPage(driver);

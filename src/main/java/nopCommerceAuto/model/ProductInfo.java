@@ -14,9 +14,6 @@ public class ProductInfo {
     }
 
     public String toString() {
-        return "ProductInfo {" +
-                "title='" + title + '\'' + ", price='" + price + '\'' + '}';
+        return "ProductInfo {" + "title='" + title + '\'' + ", price='" + price + '\'' + '}';
     }
-
-
 }

@@ -100,11 +100,7 @@ public class CheckoutPage extends AbstractPage {
             LOGGER.info("Continue button clicked successfully.");
         } catch (Exception e) {
             LOGGER.error("Failed to click Continue button: " + e.getMessage());
-            throw e; //
+            throw e;
         }
     }
-
-
-
-
 }
